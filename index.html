@@ -1,0 +1,3448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootsrap End -->
+ 
+    <!-- < <link rel="stylesheet" href="style.css" />  -->
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/9c6873f11a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End Font awsome -->
+
+
+     <!-- AOS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+:root {
+  --blue: #00b8b8;
+  --black: #333;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #eee;
+  border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: "Open Sans", sans-serif; */
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 20px;
+  /* padding-bottom: 1000px; */
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  margin-top: 100px;
+}
+.container img {
+  display: block;
+  width: 100%;
+}
+
+
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 5%;
+  height: 74px;
+  background: #2e03a7;
+}
+
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .links li {
+  list-style: none;
+  line-height: 40px;
+  margin: 0 8px;
+}
+nav .links a {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 7px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a.active,
+a:hover {
+  background: yellow;
+  transition: 0.5s;
+}
+
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Slideshow */
+/* Slideshow container */
+.slide-show {
+  position: relative;
+  margin-top: 70px;
+}
+
+.carousel-item {
+  color: white;
+  background: #000;
+  height: 32rem;
+  position: relative;
+}
+
+.containers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
+
+.carousel-caption h1 {
+  font-size: 30px;
+}
+
+img {
+  width: 100%;
+  height: 110vh;
+
+  /* object-fit: cover; */
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+}
+/* End Slide show */
+
+/*sTART ABOUT US */
+.h1_about {
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+small {
+  letter-spacing: 4px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.card {
+  background-color: #fff;
+  width: 400px;
+  /* padding: 22px 30px; */
+  border-radius: 5px;
+  /* line-height: 1.8; */
+}
+
+#ch {
+  display: none;
+}
+
+#ch:checked ~ .content {
+  display: block;
+}
+
+#ch:checked ~ label {
+  display: none;
+}
+
+.content {
+  display: none;
+}
+
+.labels {
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  background-color: blue;
+  width: 40%;
+  padding: 3px 13px;
+  margin-top: 12px;
+  box-shadow: 0 9px #999;
+  border-radius: 3px;
+}
+
+.labels:hover {
+  background-color: red;
+}
+
+/* button */
+
+/* End About */
+
+/* Starrt Counting Up */
+
+.counter-up {
+  /* background-color: ; */
+  min-height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.counter-up::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.842);
+}
+.counter-up .content {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.counter-up .content .box {
+  border: 1px dashed rgba(211, 6, 6, 0.808);
+  width: calc(25% - 30px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+}
+.content .box .icon {
+  font-size: 48px;
+  color: #e6e6e6;
+}
+.content .box .counter {
+  font-size: 50px;
+  font-weight: 500;
+  color: #f2f2f2;
+  font-family: sans-serif;
+}
+.content .box .text {
+  font-weight: 400;
+  color: #ccc;
+}
+
+/* To the top */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* END TO THE TOP */
+
+/* START OUR SERVICES  */
+div.gallery:hover .overlay {
+  opacity: 1;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+.desc {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  height: 75px;
+  background: #4512d3;
+  backdrop-filter: blur(30px);
+}
+
+div.gallery:hover .overlay {
+  opacity: 1;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 300px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  /* max-width: 300px; */
+}
+
+.responsive {
+  padding: 0 12px 40px;
+  float: left;
+  width: 12.999%;
+  /* width: 100%; */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 60px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Start Our Products */
+.over {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.containerss {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.rows:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.columns {
+  float: left;
+  width: 12.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Start Testimonials */
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .box {
+  background: #fff;
+  width: calc(33% - 10px);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+.wrapper .box i.quote {
+  font-size: 20px;
+  color: #17a2b8;
+}
+.wrapper .box .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.box .info .name {
+  font-weight: 600;
+  font-size: 17px;
+}
+.box .info .job {
+  font-size: 16px;
+  font-weight: 500;
+  color: #17a2b8;
+}
+.box .info .stars {
+  margin-top: 2px;
+}
+.box .info .stars i {
+  color: #17a2b8;
+}
+.box .content .image {
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #17a2b8;
+  border-radius: 50%;
+}
+.content .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.box:hover .content .image img {
+  border-color: #fff;
+}
+
+.wrapper .box {
+  width: calc(50% - 10px);
+  margin: 10px 0;
+}
+
+/* End Testimonials */
+
+/* Start Map */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: 0;
+}
+
+/* End Map */
+
+/* Start Contact Info */
+
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* End Contact Info */
+
+/* Start Footer Section */
+.footer_box {
+  position: relative;
+  margin-top: 100px;
+}
+
+footer {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  color: #fff;
+  background-color: #000;
+}
+
+.footer > * {
+  flex: 1 100%;
+}
+
+.footer-left {
+  margin-right: 1.25rem;
+  margin-bottom: 2em;
+}
+
+.footer-left img {
+  width: 10%;
+  height: 10vh;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.footer-ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer-right {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer-right > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.box a {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #999;
+  padding-top: 50px;
+}
+
+.footer-left p {
+  padding-right: 20%;
+  color: #999;
+}
+
+.socials a {
+  background: #364a62;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.socials a i {
+  color: #e7f2f4;
+  padding: 10px 12px;
+  font-size: 20px;
+}
+
+/* End Footer Section */
+
+/* Whatsapp start */
+.whatsapp-btn-container {
+  position: fixed;
+  right: 60px;
+  bottom: -40px;
+
+  padding: 44px;
+  animation: fade-up 1000ms forwards;
+  animation-delay: 1000ms;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes fade-up {
+  100% {
+    bottom: 24px;
+    opacity: 1;
+  }
+}
+
+.whatsapp-btn-container .whatsapp-btn {
+  font-size: 48px;
+  color: #25d366;
+  display: inline-block;
+  transition: all 400ms;
+  z-index: 1;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover {
+  transform: scale(1.2);
+}
+
+.whatsapp-btn-container span {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #075e54;
+  opacity: 0;
+  transform: rotateZ(20deg) translateX(10px);
+  transition: all 400ms;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover + span {
+  opacity: 1;
+  transform: rotateZ(0deg) translateX(0px);
+}
+
+/* whatsapp end */
+
+/* Call Button */
+.call-btn-container {
+  position: fixed;
+  left: -10px;
+  bottom: -90px;
+
+  padding: 24px;
+  animation: fade-up 1000ms forwards;
+  animation-delay: 1000ms;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes fade-up {
+  100% {
+    bottom: 24px;
+    opacity: 1;
+  }
+}
+
+.call-btn-container .call-btn {
+  font-size: 48px;
+  color: #25d366;
+  display: inline-block;
+  transition: all 400ms;
+  z-index: 1;
+}
+
+.call-btn-container .call-btn:hover {
+  transform: scale(1.2);
+}
+
+.call-btn-container span {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #075e54;
+  opacity: 0;
+  transform: rotateZ(20deg) translateX(10px);
+  transition: all 400ms;
+}
+
+call-btn-container .call-btn:hover + span {
+  /* opacity: 1; */
+  transform: rotateZ(0deg) translateX(0px);
+}
+
+/* End Call Button */
+
+/* Start Preloader */
+#preloader {
+  background: white url(images/spinner.gif) no-repeat center;
+  background-size: 15%;
+
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+/* End Preloader */
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  .carousel-item {
+    /* height: 1000px; */
+    object-fit: cover;
+    height: 680px;
+  }
+
+  /* End Slide Show */
+
+  /* Start About Us */
+  .about_container {
+    position: relative;
+    margin-top: 85px;
+  }
+
+  .main_container {
+    width: 100%;
+  }
+
+  .vids {
+    width: 50%;
+    float: left;
+    padding-left: 5px;
+    /* width: 800px; */
+  }
+
+  .h1_about {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_about {
+    margin-left: 280px;
+  }
+
+  .h3_about {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .paragraph_text {
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  .read_message {
+    padding-left: 180px;
+  }
+
+  .labels {
+    position: relative;
+    align-items: center;
+    margin-left: 400px;
+  }
+
+  .small_services {
+    position: relative;
+    margin-left: 720px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_productss {
+    position: relative;
+    margin-left: 720px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .containerss {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .small_chooses {
+    position: relative;
+    margin-left: 620px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_testimonial {
+    position: relative;
+    margin-left: 720px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_contacts {
+    position: relative;
+    margin-left: 720px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .maps {
+    position: relative;
+    margin-top: 50px;
+  }
+}
+
+/* FOR DESKTOP VIEW */
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Slide Show */
+  .carousel-item {
+    /* height: 1000px; */
+    object-fit: cover;
+    height: 680px;
+  }
+
+  /* End Slide Show */
+
+  /* Start About Us */
+  .about_container {
+    position: relative;
+    margin-top: 85px;
+  }
+
+  .main_container {
+    width: 100%;
+  }
+
+  .vids {
+    width: 50%;
+    float: left;
+    padding-left: 5px;
+    /* width: 800px; */
+  }
+
+  .h1_about {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_about {
+    margin-left: 200px;
+  }
+
+  .h3_about {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .paragraph_text {
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  .read_message {
+    padding-left: 180px;
+  }
+
+  .labels {
+    position: relative;
+    align-items: center;
+    margin-left: 400px;
+  }
+
+  .small_services {
+    position: relative;
+    margin-left: 530px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_productss {
+    position: relative;
+    margin-left: 530px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .containerss {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .small_chooses {
+    position: relative;
+    margin-left: 420px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_testimonial {
+    position: relative;
+    margin-left: 580px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_contacts {
+    position: relative;
+    margin-left: 550px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .maps {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  /* End About Us */
+
+  /* Count up */
+  .count_section {
+    position: relative;
+    margin-top: 110px;
+  }
+  /* End Count Up */
+
+  /* Start Service */
+  .services {
+    position: relative;
+    margin-top: 110px;
+  }
+
+  .h1_services {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_service {
+    text-align: center;
+    margin-left: 710px;
+  }
+
+  .image_holder {
+    position: relative;
+    margin-top: 60px;
+  }
+
+  .responsive {
+    width: 24.999%;
+  }
+
+  /* Start Products */
+  .products {
+    position: relative;
+    margin-top: 90px;
+  }
+
+  .small_products {
+    align-items: center;
+  }
+
+  .prev,
+  .next {
+    margin-top: -100px;
+    font-size: 40px;
+    text-decoration: none;
+  }
+
+  .demo cursor {
+    height: 10px;
+  }
+  /* End Products */
+
+  /* Start Why Choose US */
+  .why_choose {
+    position: relative;
+    margin-top: 100px;
+  }
+
+  .h1_choose {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_choose {
+    margin-left: 550px;
+  }
+
+  .choose_list {
+    padding-left: 30px;
+  }
+
+  .choose_list li {
+    position: relative;
+    margin-top: 70px;
+    padding-top: -130px;
+  }
+
+  .choose_list li .wording {
+    margin-right: 490px;
+  }
+
+  /* End Why Choose Us */
+
+  /* Start Testimonials */
+  .section_testimonials {
+    position: relative;
+    margin-top: 180px;
+  }
+
+  .h1_testimonials {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_testimonials {
+    /* text-align: center; */
+    margin-left: 660px;
+  }
+
+  .wrapper {
+    position: relative;
+    margin-top: 80px;
+  }
+  /* End Testimonials */
+
+  /* Start contact us */
+  .contact_us {
+    position: relative;
+    margin-top: 110px;
+  }
+
+  .h1_contact {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_contact {
+    margin-left: 700px;
+  }
+}
+
+/* END DESKTOP VIEW */
+
+/* START LAPTOP VIEW */
+
+/*  *
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav .links a {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 7px 2px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .small_services {
+    position: relative;
+    margin-left: 320px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_productss {
+    position: relative;
+    margin-left: 320px;
+    text-decoration: underline solid red 30%;
+    color: #2e03a7;
+  }
+
+  .containerss {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .small_chooses {
+    position: relative;
+    margin-left: 230px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_testimonial {
+    position: relative;
+    margin-left: 380px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .small_contacts {
+    position: relative;
+    margin-left: 330px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .maps {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .add {
+    width: 200%;
+  }
+
+  .responsive {
+    padding: 0 12px 40px;
+    float: left;
+    width: 100%;
+    /* width: 100%; */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+  /* logo */
+  nav .logo {
+    height: 70px;
+  }
+  /* SldieShow */
+  .carousel-item {
+    /* height: 1000px; */
+    object-fit: cover;
+    height: 780px;
+  }
+  /* End Slide Show */
+
+  /* Start About Page */
+  .about_container {
+    position: relative;
+    margin-top: 80px;
+  }
+  .h1_about {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_about {
+    margin-left: 280px;
+  }
+
+  .h3_about {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .paragraph_text {
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  .read_message {
+    padding-left: 180px;
+  }
+
+  .labels {
+    position: relative;
+    align-items: center;
+    margin-left: 400px;
+  }
+  /* End About Page */
+
+  /* Start count up */
+  .count_section {
+    position: relative;
+    margin-top: 90px;
+  }
+  /* End Count Up */
+
+  /* Start Service */
+  .services {
+    position: relative;
+    margin-top: 90px;
+  }
+
+  .h1_services {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_service {
+    text-align: center;
+    margin-left: 180px;
+  }
+
+
+    .desc{
+    height: 120px;
+  }
+
+
+
+  .image_holder {
+    position: relative;
+    margin-top: 60px;
+  }
+
+  .responsive {
+    width: 30.999%;
+  }
+
+  .service_image {
+    width: 100%;
+
+    /* height: 100px; */
+  }
+  /* END SERVICES */
+
+  /* Start Products */
+  .products {
+    position: relative;
+    margin-top: 90px;
+  }
+
+  .h1_products {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_products {
+    text-align: center;
+    margin-left: 250px;
+  }
+  /* End Products */
+
+  /* Start Why Choose Us */
+  .why_choose {
+    position: relative;
+    margin-top: 100px;
+  }
+
+  .h1_choose {
+    text-align: center;
+    font-size: 80px;
+  }
+
+  .small_choose {
+    text-align: center;
+    margin-left: 220px;
+  }
+
+  .choose_list {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  /* End Why Choose Us */
+
+  /* Start Testimonials */
+  .section_testimonials {
+    position: relative;
+    margin-top: 140px;
+  }
+
+  .h1_testimonials {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_testimonials {
+    /* text-align: center; */
+    margin-left: 300px;
+  }
+
+  /* End Testimonials */
+
+  /* Start Contact Us */
+  .contact_us {
+    position: relative;
+    margin-top: 120px;
+  }
+
+  .h1_contact {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .small_contact {
+    margin-left: 300px;
+  }
+}
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    height: 70px;
+
+    /* justify-content: center; */
+  }
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: rgba(29, 32, 226, 0.8); */
+    background: #2e03a7;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+  nav .links a {
+    font-size: 20px;
+  }
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+  nav .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+  /* END NAVBAR */
+
+
+  /* slideShow */
+  .carousel-item {
+  color: white;
+  background: #000;
+  height: 28rem;
+  position: relative;
+}
+
+
+/* Start Services */
+div.gallery img {
+  width: 100%;
+  height: 300px;
+}
+
+
+.responsive {
+  padding: 0 12px 40px;
+  float: left;
+  width: 30.999%;
+  /* width: 100%; */
+}
+
+.desc{
+  height: 280px;
+}
+/* End Services */
+
+
+  /* Start About us */
+  .about_container {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .h1_about {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .company_name {
+    font-family: "Anton", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 5px;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .about_container {
+    width: auto;
+  }
+  .vids {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .labels {
+    margin-left: 80px;
+  }
+
+  /* End About Us */
+
+  /* start Counting Up */
+  .count_section {
+    position: relative;
+    margin-top: 140px;
+  }
+
+  .counter-up .content .box {
+    width: 100%;
+  }
+
+  .wrapper {
+    padding: 20px;
+  }
+  .counter-up {
+    padding: 30px 20px 0 20px;
+  }
+
+  /* End Count up */
+
+  /* Start Services Section */
+  .services {
+    position: relative;
+    margin-top: 90px;
+  }
+
+  .h1_services {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .div.gallery img {
+    width: 100%;
+    height: 60vh;
+    padding-top: 10px;
+  }
+
+  .desc{
+    height: 120px;
+  }
+
+  
+  .small_services{
+    position: relative;
+    margin-left: 220px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+
+  .overlay{
+    bottom: 90px;
+  }
+
+  /* End Service Section */
+
+
+  /* Start Products */
+  .h1_products{
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+
+  .small_productss{
+    position: relative;
+    margin-left: 280px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+  } 
+
+
+
+
+  /* End products */
+
+
+
+  /* Start Why Choose Us */
+  
+
+  .why_choose{
+    position: relative;
+top: 90px;
+  }
+
+
+
+  .h1_choose {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+
+    text-align: center;
+  }
+
+  .small_chooses{
+    position: relative;
+    margin-left: 30px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+
+
+  /* End Why Choose Us */
+
+  /* Start Testimonials */
+  .section_testimonials{
+    position: relative;
+    top: 250px;
+  }
+
+
+
+
+  .h1_testimonials {
+    font-size: 35px;
+    line-height: 1;
+    margin-bottom: 20px;
+
+
+    text-align: center;
+  }
+
+  .small_testimonial{
+    position: relative;
+    margin-left: 80px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+  .wrapper .box{
+    width: 100%;
+  }
+
+  .h1_testimonials {
+    text-align: center;
+  }
+
+
+  /* End Testimonials */
+  .contact_us{
+    position: relative;
+    top: 300px;
+  }
+  .h1_contact {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+
+  }
+.small_contacts{
+  position: relative;
+    margin-left: 80px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+}
+
+  .contact_info{
+    position: relative;
+    top: 280px;
+  }
+
+
+  /* End Contact Us */
+
+  /* Start Maps */
+  .maps{
+    position: relative;
+    top: 320px;
+  }
+
+  /* End maps */
+
+  /* Start Contact Info */
+
+ 
+  .footer_box{
+      position: relative;
+      top: 160px;
+    }
+
+  /* ENd Contact Info */
+
+  
+}
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+
+
+/*  START  MOVILE VIEW SMALL SCREENS */
+@media only screen and (min-width: 320px) and (max-width: 481px) {
+  /* START NAVBAR */
+  nav .logo {
+    float: none;
+    width: 20%;
+    height: 10vh;
+
+    /* justify-content: center; */
+  }
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: rgba(29, 32, 226, 0.8); */
+    background: #2e03a7;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+  nav .links a {
+    font-size: 20px;
+  }
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+  nav .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+  /* END NAVBAR */
+
+  /* Start About us */
+  .about_container {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .h1_about {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .h3_about{
+    font-size: 25px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+
+  .small_about{
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  .company_name {
+    font-family: "Anton", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 5px;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .about_container {
+    width: auto;
+  }
+  .vids {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .labels {
+    margin-left: 80px;
+  }
+
+  /* End About Us */
+
+  /* start Counting Up */
+  .count_section {
+    position: relative;
+    margin-top: 140px;
+  }
+
+  .counter-up .content .box {
+    width: 100%;
+  }
+
+  .wrapper {
+    padding: 20px;
+  }
+  .counter-up {
+    padding: 30px 20px 0 20px;
+  }
+
+  /* End Count up */
+
+  /* Start Services Section */
+  .services {
+    position: relative;
+    margin-top: 90px;
+  }
+
+  .h1_services {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .div.gallery img {
+    width: 100%;
+    height: 60vh;
+    padding-top: 10px;
+  }
+
+
+  .small_services{
+    position: relative;
+    margin-left: 80px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+
+  .desc{
+    height: 120px;
+  }
+
+  .overlay{
+    bottom: 90px;
+  }
+
+  /* End Service Section */
+
+
+  /* Start products */
+  .products{
+    position: relative;
+    top: 80px;
+  }
+
+
+  .h1_products{
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+
+  .small_productss{
+    position: relative;
+    margin-left: 80px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+  } 
+
+
+  .over{
+    width: 100%;
+    height: 50vh;
+  }
+  /* end products */
+
+
+  /* Start Why Choose Us */
+  .why_choose{
+    position: relative;
+top: 190px;
+  }
+
+
+
+  .h1_choose {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+
+    text-align: center;
+  }
+
+  .small_chooses{
+    position: relative;
+    margin-left: 30px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  /* End Why Choose Us */
+
+  /* Start Testimonials */
+  .section_testimonials{
+    position: relative;
+    top: 290px;
+  }
+
+
+
+  .wrapper .box{
+    width: 100%;
+  }
+
+  .h1_testimonials {
+    font-size: 35px;
+    line-height: 1;
+    margin-bottom: 20px;
+
+
+    text-align: center;
+  }
+
+  .small_testimonial{
+    position: relative;
+    margin-left: 80px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+  }
+
+  /* End Testimonials */
+
+  /* Start Contact Us */
+  .contact_us{
+    position: relative;
+    top: 300px;
+  }
+  .h1_contact {
+    font-size: 45px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+
+  }
+.small_contacts{
+  position: relative;
+    margin-left: 80px;
+    bottom: 20px;
+    font-weight: bolder;
+    color: #2e03a7;
+}
+
+  .contact_info{
+    position: relative;
+    top: 320px;
+  }
+
+
+  /* End Contact Us */
+
+  /* Start Maps */
+  .maps{
+    position: relative;
+    top: 320px;
+  }
+
+  /* End maps */
+
+
+  .col-md-6{
+    width: 3000px;
+
+
+  }
+
+  
+  /* Start Contact Info */
+
+ 
+
+  /* ENd Contact Info */
+
+
+    /* whatsapp start */
+    .whatsapp-btn-container{
+        position: fixed;
+     
+        right: 5px;
+  bottom: -1px;
+
+  padding: 75px;
+    }
+
+    /* whatsapp end */
+
+
+
+    .footer_box{
+      position: relative;
+      top: 210px;
+    }
+
+
+  /* footer */
+  .footer-left img {
+    width: 30%;
+    height: 20vh;
+  }
+  /* end footer */
+}
+
+
+@media screen and (min-width: 600px) {
+  .footer-right > * {
+    flex: 1;
+  }
+  .footer-left {
+    flex: 1 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 15px;
+  }
+}
+
+
+    </style>
+    <!-- Title -->
+    <title>WKK  ELECTRICAL ENGINEERING - ELECTRICAL ENGINEERING COMPANY</title>
+    <!-- Meta Description -->
+    <meta name="description" content="We are the best electrical engineering company,we specialize in solar energy ,selling of solar products, we install solar panels">
+    <!-- META KEYWORDS -->
+    <meta name="keywords" content="Solar Energy, Solar Energy System Service,Solar Energy Equipment Supplier,Electrical Engineering , CCTV Camera, Centurion Gate Opener,Power Inventer">
+
+    <!-- FAVICON -->
+     <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+
+  </head>
+  <body>
+      <!-- Predloader -->
+      <div id="preloader" "></div>
+
+      <section class="navbars">
+    <nav>
+     <label> <input id="nav-toggle" type="checkbox" /></label>
+      <!-- Site logo -->
+      <img 
+      srcset="images/logo.webp 480w, images/logo.webp 800w",
+     
+      sizes="(max-width:600px) 480px, 800px",
+      loading="lazy",
+      style="width: 10%; height: 10vh;"
+      
+      
+      
+      
+      src="images/logo.webp" class="logo" alt="wkkLogo" />
+      <ul class="links">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </nav>
+  </section>
+
+    <!-- sLIDER SHOW -->
+    <section class="slide-show">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide carousel-fade"
+        data-bs-interval="5000"
+        data-bs-touch="true"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="5"
+          aria-label="Slide 6"
+        ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="2000">
+            <img
+            srcset="images/Solar_installation1.webp 480w, images/Solar_installation1.webp 800w",
+   
+            sizes="(max-width:600px) 480px, 800px",
+
+
+
+              class="overlay-image"
+              src="images/Solar_installation1.webp"
+              class="d-block w-100"
+              alt="Installation Of Solar Panels"
+            />
+            <div class="carousel-caption">
+              <h1
+                style="
+             
+                  font-family:Oswald, sans-serif;
+                  font-optical-sizing: auto;
+                    font-weight: 700;
+                   font-style: normal;
+                    letter-spacing: 5px;
+                    font-size: 30px;
+                    text-align: center;
+                    "
+              >
+              Best Solar Energy Company
+              </h1>
+              <p style="
+              font-size: 15px; letter-spacing: 5px;font-family: Great Vibes, cursive;
+              font-weight: 400;
+              font-style: normal;">
+                We supply and install leading brands of solar pannels
+              </p>
+              <a href="#services " class="btn btn-lg btn btn-warning"> Our services </a>
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="1000">
+            <img
+            srcset="images/Solar_installation2.webp 480w, images/Solar_installation2.webp 800w",
+
+            sizes="(max-width:600px) 480px, 800px",
+
+
+              class="overlay-image"
+              src="images/Solar_installation2.webp"
+              class="d-block w-100"
+              alt="Installation Of Solar Panels"
+            />
+            <div class="carousel-caption">
+              <h1
+              style="
+             
+              font-family:Oswald, sans-serif;
+              font-optical-sizing: auto;
+                font-weight: 700;
+               font-style: normal;
+                letter-spacing: 5px;
+                font-size: 30px;
+                text-align: center;
+                "
+              >We Install Solar Panels</h1>
+              <p style="
+              font-size: 15px; letter-spacing: 5px;font-family: Great Vibes, cursive;
+              font-weight: 400;
+              font-style: normal;">
+              Installation and maintenance of solar panels
+              </p>
+              <a href="#services " class="btn btn-lg btn btn-warning"> Our services </a>
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="1000">
+            <img
+            srcset="images/MenMount.webp 480w, images/MenMount.webp 800w",
+       
+            sizes="(max-width:600px) 480px, 800px",
+
+
+              class="overlay-image"
+         
+              src="images/MenMount.webp"
+              class="d-block w-100"
+              alt="Installation Of Solar Panels"
+            />
+            <div class="carousel-caption">
+              <h1
+              style="
+           
+                font-family:Oswald, sans-serif;
+                font-optical-sizing: auto;
+                  font-weight: 700;
+                 font-style: normal;
+                  letter-spacing: 5px;
+                  font-size: 30px;
+                  text-align: center;
+                  "
+            >
+            Best Solar Energy Company
+            </h1>
+            <p style="
+            font-size: 15px; letter-spacing: 5px;font-family: Great Vibes, cursive;
+            font-weight: 400;
+            font-style: normal;">
+              We supply and install leading brands of solar pannels
+            </p>
+            <a href="#services " class="btn btn-lg btn btn-warning"> Our services </a>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+            srcset="images/roofTop.webp 480w, images/roofTop.webp 800w",
+     
+            sizes="(max-width:600px) 480px, 800px",
+
+
+
+              src="images/roofTop.webp"
+       
+              class="overlay-image"
+              class="d-block w-100"
+              alt="Installation Of Solar Panels"
+            />
+            <div class="carousel-caption">
+              <h1
+              style="
+             
+              font-family:Oswald, sans-serif;
+              font-optical-sizing: auto;
+                font-weight: 700;
+               font-style: normal;
+                letter-spacing: 5px;
+                font-size: 30px;
+                text-align: center;
+                "
+              >We Install Solar Panels</h1>
+              <p style="
+              font-size: 15px; letter-spacing: 5px;font-family: Great Vibes, cursive;
+              font-weight: 400;
+              font-style: normal;">
+                Installation and  maintenance of solar panels
+              </p>
+              <a href="#services " class="btn btn-lg btn btn-warning"> Our services </a>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img 
+            srcset="images/SolarInstalls.webp 480w, images/SolarInstalls.webp 800w",
+            sizes="(max-width:600px) 480px, 800px",
+ 
+            
+            
+            
+            src="images/SolarInstalls.webp" class="d-block w-100" alt="inventer"  class="overlay-image" />
+            
+            <div class="carousel-caption ">
+              <h1
+              style="
+             
+              font-family:Oswald, sans-serif;
+              font-optical-sizing: auto;
+                font-weight: 900;
+               font-style: normal;
+                letter-spacing: 5px;
+                font-size: 30px;
+                text-align: center;
+                "
+              
+              > Sales & Installation Of Power Inventer</h1>
+              <p style="
+              font-size: 15px; letter-spacing: 5px;font-family: Great Vibes, cursive;
+              font-weight: 400;
+              font-style: normal;">>
+                We supply, install and maintain power inventer for all kinds of property
+              </p>
+              <a href="#services " class="btn btn-lg btn btn-warning"> Our services </a>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img 
+            srcset="images/inventer_switch.webp 480w, images/inventer_switch.webp 800w",
+            sizes="(max-width:600px) 480px, 800px",
+       
+            
+            
+            
+            src="images/inventer_switch.webp" class="d-block w-100" alt="inventer" class="overlay-image" />
+            <div class="carousel-caption ">
+              <h1
+              style="
+             
+              font-family:Oswald, sans-serif;
+              font-optical-sizing: auto;
+                font-weight: 900;
+               font-style: normal;
+                letter-spacing: 5px;
+                font-size: 30px;
+                text-align: center;
+                "
+              
+              > Sales & Installation Of Power Inventer</h1>
+              <p style="
+              font-size: 15px; letter-spacing: 5px;font-family: Great Vibes, cursive;
+              font-weight: 400;
+              font-style: normal;">>
+                We supply, install and maintain power inventer for all kinds of property
+              </p>
+              <a href="#services " class="btn btn-lg btn btn-warning"> Our services </a>
+
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- To the top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">^<br>Top</button>
+
+    <!-- About Us -->
+     <section class="about_container" id="about">
+      <div class="main_container">
+        <video  class="vids"   autoplay controls  title="solar panels installation">
+          <source src="images/DroneVid.mp4" type="video/mp4"  alt="Video Of Installation Of Solar Panels" />
+        </video>
+
+        <h1  data-aos="fade-down"  class="h1_about" >About Us</h1>
+        <small class="small_about" >K N O W     A B O U T    U S</small>
+        <h3   class="h3_about" >WKK MULTI ELECTRICAL ENGINEERING </h3>
+  
+        
+        <p class="paragraph_text">
+          At WKK Multi Electrical Engineering, we are more than just an solar energy and diversed electrical engineering hub.We are a team of passionate innovators dedicated to transforming Solar Energy and Electrical Engineering Space.
+
+        </p>
+
+        <h1   data-aos="fade-down"   style="font-weight: 400; color:  #2e03a7; "><b>Our Story</b></h1>
+        <p data-aos="fade-right">
+
+          It all started in 2016, when <b>Mr.William Kwame Konu</b>  saw a gap in the market for the erratic power supply and manufacturing of electrical components .
+           With a vision for innovation, sustainability, and  quality, WKK Multi Electrical Engineering was born, and we have been helping 
+          residential and commerical properties achieve a reliable power supply and electrical engineering ever since.
+          
+          
+          </p>
+      
+
+          <div class="card">
+            <input id="ch" type="checkbox">
+            <p class="read_message">What we represent....</p>
+            <div class="content">
+                <p class="read_message">Our Mission<br> Our mission is to provide energy and electrical related products  that makes a real difference in the lives of commerical and residential property owners. and Our Vision</p>
+                <label class="labels" for="ch">Show Less</label> 
+            </div>
+           <label class="labels" for="ch">Read More</label> 
+    
+          </div>
+       
+
+      </div>
+   
+        
+   
+     </section>
+    
+ 
+
+
+    <!-- Count Up -->
+      <section class="count_section">
+    <div class="counter-up">
+      <div class="content">
+        <div  data-aos="fade-right"   class="box">
+          <div class="icon">  <i class="fa-solid fa-people-roof fa-4xl" style="color: #eb0000"></i></div>
+          <!-- <div class="counter">50</div> -->
+           <div><span class="counter">50</span>'+'</div>
+          <div class="text">Happy Clients</div>
+        </div>
+        <div  data-aos="fade-right" class="box">
+          <div class="icon">     <i
+            class="fa-solid fa-screwdriver-wrench fa-4xl"
+            style="color: #eb0000"
+          ></i></div>
+          <div class="counter">50</div>
+          <div class="text">Installation</div>
+        </div>
+        <div  data-aos="fade-right"  class="box">
+          <div class="icon"> <i
+            class="fa-solid fa-helmet-safety fa-4xl"
+            style="color: #eb0000"
+          ></i></div>
+          <div class="counter">10</div>
+          <div class="text">Technicians</div>
+        </div>
+        <div  data-aos="fade-right"  class="box">
+          <div class="icon">        <i class="fa-solid fa-list-check fa-4xl" style="color: #eb0000"></i></div>
+          <div class="counter">70 </div>
+          <div class="text">Projects</div>
+        </div>
+      </div>
+    </div>
+  </section> 
+    <!-- End Count up -->
+
+       <!-- whatsapp -->
+       <div class="whatsapp-btn-container">
+        <a  class="whatsapp-btn"  href="https://wa.me/233246437021"><i class="fa-brands fa-whatsapp" style="color: #8aff7a;"></i> </a>
+        <span>Contact Us</span>
+      </div>
+     
+      <!-- END WHATSAPP -->
+
+      <!-- CALL US -->
+      <div class="call-btn-container">
+        <a class="call-btn" href="tel:+233246437021"><i class="fa-solid fa-square-phone" ></i></a>
+        <span>Contact Us</span>
+        <p style="font-size: 15px; font-weight: bolder; color: #2e03a7;">Call Us</p> 
+      </div>
+
+      <!-- END CALL IS -->
+     
+
+
+    <!-- Start Services -->
+<!-- Our Services -->
+<section class="services" id="services">
+  <h1  data-aos="fade-down" class="h1_services">Our Services</h1>
+  <small class="small_services">WHAT WE OFFER</small>
+
+  <div class="image_holder">
+    <div class="responsive">
+      <div   class="gallery">
+  
+          <img 
+          srcset="images/SolarBoard.webp 480w, images/SolarBoard.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy"
+          
+            src="images/SolarBoard.webp"
+            alt=" Best solar brands"
+            width="600"
+            height="400"
+            class="service_image"
+          />
+          <div class="overlay">We Sell Leading Solar Brands & Products </div>
+        <div class="desc">SELLING OF SOLAR PRODUCTS </div>
+      </div>
+    </div>
+  
+    <div class="responsive">
+      <div    class="gallery">
+  
+          <img 
+          srcset="images/roof_install.webp 480w, images/roof_install.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy"
+          
+          src="images/roof_install.webp" alt="Solar installation"  />
+        </a>
+        <div class="overlay">We Install & Maintain Solar</div>
+        <div class="desc">SOLAR INSTALLATION & MAINTENANCE</div>
+      </div>
+    </div>
+  
+    <div class="responsive">
+      <div   class="gallery">
+  
+          <img
+          srcset="images/AutomaticPower.webp 480w, images/AutomaticPower.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy"
+
+            src="images/AutomaticPower.webp"
+            alt="powerSwitch"
+            width="600"
+            height="400"
+            class="service_image"
+          />
+        </a>
+        <div class="overlay">We locally Manufacture Automatic Transfer Switch
+          +
+        </div>
+        <div class="desc">MANUFACTURING OF AUTOMATIC TRANSFER SWITCH (ATS)</div>
+      </div>
+    </div>
+  
+    <div class="responsive">
+      <div     class="gallery">
+    
+          <img
+          srcset="images/Power_Inventor.jpg 480w, images/Power_Inventor.jpg 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy" ,
+            src="images/Power_Inventor.jpg"
+            alt="Installation Of PowerInventor"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Sell & Install Power Inventer</div>
+        <div class="desc">SELLING AND INSTALLATION OF POWER INVENTER
+      </div>
+    </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/AVR-min.webp 480w, images/AVR-min.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy" ,
+            src="images/AVR-min.webp"
+            alt="We Install Automatic Volatge Regulator"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Install Automatic Volatge Regulator</div>
+        <div class="desc">INSTALLATION OF AUTOMATIC VOLTAGE REGULATOR</div>
+      </div>
+    </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/GeneralElectrical.webp 480w, images/GeneralElectrical.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy" ,
+            src="images/GeneralElectrical.webp"
+            alt="General Electrical Engineering Service"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Offer General Electrical Engineering Service</div>
+        <div class="desc">GENERAL ELECTRICAL ENGINEERING </div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/electric_supplies.webp 480w, images/electric_supplies.webp  800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy" ,
+            src="images/electric_supplies.webp"
+            alt="We Sell General Electrical Supplies"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Sell General Electircal Supplies</div>
+        <div class="desc">SELLING OF GENERAL ELECTRICAL SUPPLIES</div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/generator.webp 480w, images/generator.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy" ,
+            src="images/generator.webp"
+            alt="Installation and Maintenance Of Generators"
+       
+          />
+        </a>
+        <div class="overlay">We Install & Maintain Generators</div>
+        <div class="desc">GENERATOR INSTALLATION & MAINTENANCE</div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/electric-fences.webp 480w, images/electric-fences.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy" ,
+            src="images/electric-fences.webp"
+            alt="Installation Of Electric Fence"
+   
+          />
+        </a>
+        <div class="overlay">We Sell & Install Electrical Fence </div>
+        <div class="desc">SELLING AND INSTALLATION OF ELECTRIC FENCE </div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+            <img
+            srcset="images/slider.webp 480w, images/slider.webp 800w",
+            sizes="(max-width:600px) 480px, 800px",
+            loading="lazy" ,
+
+
+            src="images/slider.webp"
+            alt="Installation of Centurion Gate Opener"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Install Gate Automation </div>
+        <div class="desc">GATE AUTOMATION </div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/Build_cttv.webp 480w, images/Build_cttv.webpp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy" ,
+
+
+            src="images/Build_cttv.webp"
+            alt="Installation Of CCTV Cameras"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Install CCTV for residential & commercial properties</div>
+        <div class="desc">INSTALLATION OF CCTV FOR RESIDENTIAL & COMMERCIAL</div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/fireAlarm-min.webp 480w, images/fireAlarm-min.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy",
+
+            src="images/fireAlarm-min.webp"
+            alt="Installation Of Fire Alarm System"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Install Fire Alarm System></div> 
+          <div class="desc">INSTALLATION OF FIRE ALARM SYSTEM </div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/impexp.jpg 480w, images/impexp.jpg 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy",
+
+            src="images/impexp.jpg"
+            alt="Importation and Exportation Of Electrical Supplies"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Import and Export Goods</div> 
+        <div class="desc">IMPORTATION & EXPORTATION </div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+    
+          <img
+          srcset="images/intercomm.webp 480w, images/intercomm.webp 800w",
+          sizes="(max-width:600px) 480px, 800px",
+          loading="lazy",
+          
+
+
+            src="images/intercomm.webp"
+            alt=" Installation Of Video Intercom System"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="overlay">We Install Video Intercom System</div> 
+        <div class="desc">INSTALLATION OF VIDEO INTERCOM</div>
+      </div>
+    </div>
+  
+  </div>
+ 
+  <div class="clearfix"></div>
+      </section> 
+        <!-- End  Services -->
+
+
+                <!-- OUR PRODUCTS -->
+
+   <section class="products" id="products">
+       <h1  data-aos="fade-down"  class="h1_products">Our Products</h1>
+        <small class="small_productss">WHAT WE SELL</small>
+
+        <div class="containerss">
+            <div class="mySlides">
+                <div class="numbertext">1 / 13</div>
+                <img 
+                srcset="images/SellPannel.webp 480w, images/SellPannel.webp 800w",
+                sizes="(max-width:600px) 480px, 800px",
+                loading="lazy"
+                
+                
+                class="over" src="images/SellPannel.webp" style="width: 100%" alt="Solar Panels" />
+              </div>
+            <div class="mySlides">
+              <div class="numbertext">2 / 13</div>
+              <img 
+              srcset="images/connector1.webp 480w, images/connector1.webp 800w",
+              sizes="(max-width:600px) 480px, 800px",
+              loading="lazy"
+              
+              class="over" src="images/connector1.webp" style="width: 100%" alt="MC4 connector"/>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 13</div>
+                <img 
+                srcset="images/images/connect2.webp 480w, images/connect2.webp 800w",
+                sizes="(max-width:600px) 480px, 800px",
+                loading="lazy"
+                
+                
+                class="over" src="images/connect2.webp" style="width: 100%;" alt="2 in 1 MC4 connector"/>
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">4 / 13</div>
+                <img 
+                srcset="images/middle_clamp.webp 480w, images/middle_clamp.webp 800w",
+                sizes="(max-width:600px) 480px, 800px",
+                loading="lazy
+                
+                
+                class="over" src="images/middle_clamp.webp" style="width: 100%; ;" alt="middle Clamp" />
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">5 / 13</div>
+                <img 
+                srcset="images/300-mobile.webp 480w, images/300-mobile.webp 800w",
+                sizes="(max-width:600px) 480px, 800px",
+                loading="lazy
+                
+                
+                
+                
+                class="over" src="images/300-mobile.webp" style="width: 100%;" alt="300 watt mobile power station" />
+              </div>
+      
+            <div class="mySlides">
+              <div class="numbertext">6 / 13</div>
+              <img 
+              srcset="images/600-mobile.webp 480w, images/600-mobile.webp 800w",
+              sizes="(max-width:600px) 480px, 800px",
+              loading="lazy
+              
+              
+              class="over" src="images/600-mobile.webp" style="width: 100%;" alt="600 watt mobile power station" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext"> 8 / 13</div>
+                <img 
+                srcset="images/1200-mobile.webp 480w, images/1200-mobile.webp 800w",
+              sizes="(max-width:600px) 480px, 800px",
+              loading="lazy
+                
+                
+                class="over" src="images/1200-mobile.webp" style="width: 100%;" alt="1200 watt mobile power station" />
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">9 / 13</div>
+                <img 
+                srcset="images/lithiumBat.webp 480w, images/lithiumBat.webp 800w",
+                sizes="(max-width:600px) 480px, 800px",
+                loading="lazy
+                  
+                
+                
+                class="over" src="images/lithiumBat.webp" style="width: 100%;" alt="Lithium Batteries" />
+              </div>
+              <div class="mySlides">
+                <div class="numbertext">10 / 13</div>
+                <img 
+                srcset="images/LithiumBatter.webp 480w, images/LithiumBatter.webp 800w",
+                sizes="(max-width:600px) 480px, 800px",
+                loading="lazy
+                  
+                
+                
+                
+                class="over" src="images/LithiumBatter.webp" style="width: 100%;"  alt="Lithium Batteries"/>
+              </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">11 / 13</div>
+              <img 
+              srcset="images/DC_cables.webp 480w, images/DC_cables.webp 800w",
+              sizes="(max-width:600px) 480px, 800px",
+              loading="lazy
+                
+              
+              
+              class="over" src="images/DC_cables.webp" style="width: 100%;" alt="DC Cables" />
+            </div>
+      
+            <div class="mySlides">
+              <div class="numbertext">12 / 13</div>
+              <img
+              srcset="images/DC_cables.webp 480w, images/DC_cables.webp 800w",
+              sizes="(max-width:600px) 480px, 800px",
+              loading="lazy
+                
+              
+              
+              class="over" src="images/SolarInventer.webp" style="width: 100%;" alt="Soalr Inventer" />
+            </div>
+      
+            <div class="mySlides">
+              <div class="numbertext">13 / 13</div>
+              <img 
+              srcset="images/invert.webp 480w, images/invert.webp 800w",
+              sizes="(max-width:600px) 480px, 800px",
+              loading="lazy
+
+
+              class="over" src="images/invert.webp" style="width: 100%;"alt='Inventer'/>
+            </div>
+    
+            
+      
+            <a   class="prev" onclick="plusSlides(-1)">❮</a>
+            <a   class="next" onclick="plusSlides(1)">❯</a>
+      
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+      
+            <div class="rows">
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/SellPannel.webp"
+                  style="width: 100px; height: 80px;"
+                  onclick="currentSlide(1)"
+                  alt="Solar Pannels & Products"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/connector1.webp"
+                  style="width: 100px; height: 80px;"
+                  onclick="currentSlide(2)"
+                  alt="MC4 Connector"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/connect2.webp"
+                  style="width: 100px; height: 80px;"
+                  onclick="currentSlide(3)"
+                  alt="2 in 1 MC4 Connector"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/middle_clamp.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(4)"
+                  alt="Middle & End Clamp"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/300-mobile.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(5)"
+                  alt="300-Watt Mobile Outdoor Power Station"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/600-mobile.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(6)"
+                  alt="600-Watt Mobile Outdoor Power Station"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/1200-mobile.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(7)"
+                  alt="1200-Watt Mobile Outdoor Power Station"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/lithiumBat.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(8)"
+                  alt="300AH Lithium Battery"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/LithiumBatter.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(9)"
+                  alt="Lithium Batteries"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/DC_cables.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(10)"
+                  alt="DC Cables"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/SolarInventer.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(11)"
+                  alt="Solar Inventer"
+                />
+              </div>
+              <div class="columns">
+                <img
+                  class="demo cursor"
+                  src="images/invert.webp"
+                  style="width: 100px; height: 80px"
+                  onclick="currentSlide(12)"
+                  alt="Inventer"
+                />
+              </div>
+            </div>
+          </div>
+
+    </section>
+
+
+
+        <!--  Start Why Choose Us -->
+      <section class="why_choose">
+
+        <h1  data-aos="fade-down"     class="h1_choose">Why Choose Us</h1>
+        <small class="small_chooses">Leading Multi Electrical Engineering</small>
+
+        <div class="choose_list">
+          <ol class="fa-ul" data-aos="fade-up"
+          >
+         <li><span class="fa-li"><i class="fas fa-spinner fa-pulse fa-xl" style="color: #eb0000"></i></span><p  class="wording">We ensure complete security</p></li>
+         <li><span class="fa-li"><i class="fas fa-spinner fa-pulse  fa-xl"        style="color: #eb0000" ></i></span><p  class="wording">Clearance and compliance service</p></li>
+         <li class='right'><span class="fa-li"><i class="fas fa-spinner fa-pulse  fa-xl"        style="color: #eb0000" ></i></span><p  class="wording">Maintain high ethical standards</p></li>
+         <li class='rights'><span class="fa-li"><i class="fas fa-spinner fa-pulse  fa-xl"        style="color: #eb0000" ></i></span><p  class="wording">We ensure swfit clearance and delivery</p></li>
+         <li class='far_right'><span class="fa-li"><i class="fas fa-spinner fa-pulse  fa-xl"        style="color: #eb0000" ></i></span><p  class="wording">We listen to our clients objectives and aspirations and therefore provide customize solutions.</p></li>
+       
+       </ol>
+        </div>
+       
+      </section> 
+
+        <!-- End Why Choose Us -->
+
+
+
+        <!-- START Testimonials -->
+         <section class="section_testimonials">
+          <h1  data-aos="fade-down"       class="h1_testimonials">What Our Clients Say</h1>
+          <small class="small_testimonial">Testimoinals</small>
+          <div class="wrapper">
+        
+            <div  data-aos="fade-right"  class="box">
+              <i class="fas fa-quote-left quote"></i>
+              <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+              <div class="content">
+                <div class="info">
+                  <div class="name">Rtd. Ing Richard Deku</div>
+                  <!-- <div class="job">Designer | Developer</div> -->
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <div class="image">
+                  <img 
+                  srcset="images/man.jpg 480w, images/man.jpg 800w",
+                  sizes="(max-width:600px) 480px, 800px",
+                  
+                  src="images/man.jpg" alt="oldman">
+                </div>
+              </div>
+            </div>
+            <div   data-aos="fade-right" class="box">
+              <i class="fas fa-quote-left quote"></i>
+              <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+              <div class="content">
+                <div class="info">
+                  <div class="name">Esq. Nana Serwaa Asare</div>
+                  <!-- <div class="job">Rtd. Ing Richard Deku</div> -->
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <div class="image">
+                  
+                  <img 
+                  srcset="images/copWoman.webp 480w, images/copWoman.webp 800w",
+                  sizes="(max-width:600px) 480px, 800px",
+                  src="images/copWoman.webp" alt=coporateWoman"">
+                </div>
+              </div>
+            </div>
+            <div  data-aos="fade-right" class="box">
+              <i class="fas fa-quote-left  quote"></i>
+              <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+              <div class="content">
+                <div class="info">
+                  <div class="name">Mr. James Adu-Gyamfi</div>
+                  <!-- <div class="job">Esq. Nana Serwaa Asare</div> -->
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <div class="image">
+                  <img src="images/man3.webp" alt="oldman2">
+                </div>
+              </div>
+            </div>
+          </div>
+         </section>
+     
+        <!-- End Testimoinals -->
+
+
+        <!-- Contact Us  -->
+         <section class="contact_us" id="contact">
+          <h1  data-aos="fade-down"         class="h1_contact">Contact Us</h1>
+          <small class="small_contacts">GET IN TOUCH</small> 
+        </section>
+
+        <!-- Mapping -->
+         <section class="maps">
+          <div  class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.702695522873!2d-0.22526100000002566!3d5.610852700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf993d93956a23%3A0x1a0b96d8f2a2f753!2s84%20Onyankle%20St%2C%20Accra!5e0!3m2!1sen!2sgh!4v1728414498609!5m2!1sen!2sgh" width="1200" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d508180.04903274047!2d-0.4836941937500242!3d5.690494037694048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9981e5cbf6a9%3A0x5467d65a819e486e!2sTesano%20Sports%20Club!5e0!3m2!1sen!2sgh!4v1727985099661!5m2!1sen!2sgh" width="1200" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div> -->
+         </section> 
+
+
+         <!-- Contact Info -->
+          <section class="contact_info">
+           <div class="container border mt-3 bg-light">
+            <div class="row">
+                <div 
+
+                class="col-md-6 ">
+               
+                
+
+
+                <img 
+                srcset="images/Ads-min.webp 480w, images/Ads-min.webp 800w",
+                loading="lazy",
+                sizes="(max-width:600px) 480px, 800px",
+                title="address"
+                src="images/Ads-min.webp" >  
+
+                </div>
+                <div class="col-md-6 py-3">
+                  <h1>Send Message</h1>
+                  <div class="form-group">
+                      <h5 for="name">Name</h5>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your name...">
+                  </div>
+                  <div class="form-group">
+                    <h5 for="phone">Phone Number</h5>
+                    <input type="number" class="form-control" id="number" placeholder="Enter your phone number...">
+                </div>
+                <div class="form-group">
+                  <h5 for="email">Email</h5>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email...">
+              </div>
+              <div class="form-group">
+                <h5 for="message">Message</h5>
+               <label><textarea id="message" rows="3" class="form-control"></textarea></label> 
+              </div>
+              <button class="btn btn-danger" onclick="sendMail()">Send</button>
+                </div>
+                <h1  style="font-size: 30px; font-weight: 900;" id="demo"></h1>
+            </div>
+
+           </div>
+          
+         
+          </section>
+    
+
+        <!-- Footer -->
+         <section class="footer_box">
+          <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+        aria-label='This our facebook link'
+      </a>
+ 
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+ 
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="images/logo.webp " style="width: 60px; height: 70px;" >WKK MULTI ELECTRICAL ENGINEERING
+          </h6>
+         
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Solar Pannels & Products</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">MC4 Connector</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">2 in 1 MC4 Connector</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Middle & End Clamp</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">300-Watt Mobile Outdoor Power Station</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">600-Watt Mobile Outdoor Power Station</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">1200-Watt Mobile Outdoor Power Station</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">300 AH Lithuim Battery</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Lithium Batteries</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">DC Cables</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Solar Inventer</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset"> Inventer</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Services
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Solar Products</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Solar Installation</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Manufacturing Of Automatic Power Switch</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Selling & Installation Of Inventers</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Installation Of Automatic Volatage Regulator</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">General Electrical Engineering</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">General Sales Of Elecrical Supplies</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Installation & Maintenance Of Generators</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Selling & Installation Of Elecrical Fence</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset"> Installation Of Automatic Gate Opener</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset"> Installation Of CCTV Cameras For All Types Of Property</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset"> Installation Of Fire Alarm</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset"> Importation & Exportation</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+          <!--Grid column-->
+        
+
+
+
+
+
+
+
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Flattop FootBridge,N1 GEORGE BUSH HIGHWAY,ACHIMOTA - LAPAZ OVERHEAD</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+           konuwiliam957@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> 0200172164</p>
+          <p><i class="fas fa-phone me-3"></i> 0246437021</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="">All Right Reserved by &copy; 2024 WKK MULTI ELECTRICAL  ENGINEERING</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+      </section> 
+
+
+
+
+
+
+ 
+
+
+              <!-- START JAVASCRIPT  -->
+              
+        <!-- preloader -->
+         <script>var loader=document.getElementById("preloader")
+          window.addEventListener("load",function(){loader.style.display='none'})</script> 
+        <!-- prelodade -->
+
+           <!-- aos -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+           <script>
+             AOS.init({
+                 duration:600,
+             })
+         </script>
+         <!-- End to the top -->
+
+
+                    <!-- Image Gallery -->
+
+                    <script>let slideIndex=1;showSlides(slideIndex);function plusSlides(n){showSlides((slideIndex+=n))}
+                      function currentSlide(n){showSlides((slideIndex=n))}
+                      function showSlides(n){let i;let slides=document.getElementsByClassName("mySlides");let dots=document.getElementsByClassName("demo");let captionText=document.getElementById("caption");if(n>slides.length){slideIndex=1}
+                      if(n<1){slideIndex=slides.length}
+                      for(i=0;i<slides.length;i++){slides[i].style.display="none"}
+                      for(i=0;i<dots.length;i++){dots[i].className=dots[i].className.replace(" active","")}
+                      slides[slideIndex-1].style.display="block";dots[slideIndex-1].className+=" active";captionText.innerHTML=dots[slideIndex-1].alt}</script>
+                    <!-- End Image Gallery -->
+      
+
+
+         <!-- Start to the top -->
+<script>let mybutton=document.getElementById("myBtn");window.onscroll=function(){scrollFunction()};function scrollFunction(){if(document.body.scrollTop>20||document.documentElement.scrollTop>20){mybutton.style.display="block"}else{mybutton.style.display="none"}}
+  function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0}</script>
+  
+  
+  
+                 <!-- ENd of to the top -->
+
+
+
+    <!-- HTML Form -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script type="text/javascript">(function(){emailjs.init({publicKey:"wnLXIzOCi7vaP25vN",})})();</script>
+
+            <!--  Sttart HTML FOrm -->
+
+            <script>function sendMail(){var params={name:document.getElementById('name').value,phone:document.getElementById('number').value,email:document.getElementById('email').value,message:document.getElementById('message').value,}
+              const serviceID="service_limfyb6";const templateID="template_p78l772"
+              emailjs.send(serviceID,templateID,params).then(res=>{document.getElementById('name').value=" ";document.getElementById('number').value=" ";document.getElementById('email').value=" ";document.getElementById('message').value=" ";console.log(res)
+              document.getElementById("demo").innerHTML=`Thank you . Your message was sent successfully!!`}).catch((err)=>console.log(err))}</script>
+
+
+
+            <!-- End HTML -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+
+
+  </body>
+</html>                  
