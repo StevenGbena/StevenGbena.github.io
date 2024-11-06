@@ -300,6 +300,80 @@
         bottom: 380px;
       }
 
+      /* Counter Up */
+      .count_section {
+        position: relative;
+        bottom: 350px;
+        left: 70px;
+      }
+
+      .counter-up {
+        /* background-color: ; */
+        width: 90%;
+        min-height: 50vh;
+
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 0 50px;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .counter-up::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 60%;
+        width: 100%;
+        background: #fff;
+        border-style: inset;
+      }
+      .counter-up .content {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        bottom: 60px;
+      }
+      .counter-up .content .box {
+        /* border: 1px dashed rgba(211, 6, 6, 0.808); */
+        width: calc(25% - 30px);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 20px;
+      }
+      .content .box .icon {
+        position: relative;
+        font-size: 38px;
+        color: #e6e6e6;
+        right: 100px;
+      }
+      .content .box .counter {
+        position: relative;
+        font-size: 25px;
+        font-weight: 500;
+        bottom: 50px;
+        color: #2c2727;
+
+        font-family: sans-serif;
+      }
+      .content .box .text {
+        position: relative;
+        font-weight: 400;
+        color: #ccc;
+        bottom: 50px;
+      }
+
+      /* To the top */
+
       @media screen and (max-width: 300px) {
         .cancelbtn,
         .signupbtn {
@@ -478,6 +552,38 @@
 
           transition: all 0.3s ease;
         }
+
+        .count_section {
+          position: relative;
+          bottom: 600px;
+          left: 30px;
+        }
+
+        .counter-up .content .box {
+          width: 100%;
+        }
+
+        .counter-up::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          height: 90%;
+          width: 100%;
+          background: #fff;
+        }
+
+        .counter-up .content {
+          z-index: 1;
+          position: relative;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          bottom: 30px;
+        }
       }
     </style>
     <div class="wrapper">
@@ -636,6 +742,7 @@
       </p>
 
       <!-- ENd Slideshow -->
+
       <button
         onclick="document.getElementById('id01').style.display='block'"
         style="width: auto"
@@ -643,65 +750,118 @@
       >
         Book Appointment
       </button>
+
+      <div id="id01" class="modal">
+        <span
+          onclick="document.getElementById('id01').style.display='none'"
+          class="closes"
+          title="Close Modal"
+          >&times;</span
+        >
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Book Your Visit At Hospital Care</h1>
+            <p>Please fill in this form to book an appointment.</p>
+            <hr />
+            <label for="email"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required />
+
+            <label for="phone"><b>Phone Number</b></label>
+            <input
+              type="number"
+              placeholder="Enter Number"
+              name="num"
+              required
+            />
+
+            <label for="date"><b>Select Date</b></label>
+            <input
+              type="date"
+              placeholder="Select Date"
+              name="select-date"
+              required
+            />
+            <label for="">Select Hour</label>
+
+            <select name="" id="">
+              <option value="0">10:00am</option>
+              <option value="1">10:30am</option>
+              <option value="2">11:00am</option>
+              <option value="3">12:00pm</option>
+              <option value="4">12:30pm</option>
+            </select>
+
+            <label for="">Select Service</label>
+            <select name="" id="">
+              <option value="0">Dental Care</option>
+              <option value="1">Dental Implant</option>
+              <option value="2">Dental Braces</option>
+              <option value="3">Teeth Whitening</option>
+              <option value="4">Patient Safety</option>
+            </select>
+
+            <div class="clearfix">
+              <button
+                type="button"
+                onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="signupbtn">Book Appointment</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
-    <div id="id01" class="modal">
-      <span
-        onclick="document.getElementById('id01').style.display='none'"
-        class="closes"
-        title="Close Modal"
-        >&times;</span
-      >
-      <form class="modal-content" action="/action_page.php">
-        <div class="container">
-          <h1>Book Your Visit At Hospital Care</h1>
-          <p>Please fill in this form to book an appointment.</p>
-          <hr />
-          <label for="email"><b>Name</b></label>
-          <input type="text" placeholder="Enter Name" name="name" required />
-
-          <label for="phone"><b>Phone Number</b></label>
-          <input type="number" placeholder="Enter Number" name="num" required />
-
-          <label for="date"><b>Select Date</b></label>
-          <input
-            type="date"
-            placeholder="Select Date"
-            name="select-date"
-            required
-          />
-          <label for="">Select Hour</label>
-
-          <select name="" id="">
-            <option value="0">10:00am</option>
-            <option value="1">10:30am</option>
-            <option value="2">11:00am</option>
-            <option value="3">12:00pm</option>
-            <option value="4">12:30pm</option>
-          </select>
-
-          <label for="">Select Service</label>
-          <select name="" id="">
-            <option value="0">Dental Care</option>
-            <option value="1">Dental Implant</option>
-            <option value="2">Dental Braces</option>
-            <option value="3">Teeth Whitening</option>
-            <option value="4">Patient Safety</option>
-          </select>
-
-          <div class="clearfix">
-            <button
-              type="button"
-              onclick="document.getElementById('id01').style.display='none'"
-              class="cancelbtn"
-            >
-              Cancel
-            </button>
-            <button type="submit" class="signupbtn">Book Appointment</button>
+    <section class="count_section">
+      <div class="counter-up">
+        <div class="content">
+          <div data-aos="fade-right" class="box">
+            <div class="icon">
+              <i
+                class="fa-solid fa-people-roof fa-4xl"
+                style="color: #0a64ff"
+              ></i>
+            </div>
+            <!-- <div class="counter">50</div> -->
+            <div class="counter">Eye Care</div>
+            <div class="text">Competitve Eye Care</div>
+          </div>
+          <div data-aos="fade-right" class="box">
+            <div class="icon">
+              <i
+                class="fa-solid fa-screwdriver-wrench fa-4xl"
+                style="color: #0a64ff"
+              ></i>
+            </div>
+            <div class="counter">Children</div>
+            <div class="text">Specialist in pediatrics</div>
+          </div>
+          <div data-aos="fade-right" class="box">
+            <div class="icon">
+              <i
+                class="fa-solid fa-helmet-safety fa-4xl"
+                style="color: #0a64ff"
+              ></i>
+            </div>
+            <div class="counter">Lasik</div>
+            <div class="text">Laser Eye</div>
+          </div>
+          <div data-aos="fade-right" class="box">
+            <div class="icon">
+              <i
+                class="fa-solid fa-list-check fa-4xl"
+                style="color: #0a64ff"
+              ></i>
+            </div>
+            <div class="counter">Free Consultation?</div>
+            <div class="text">View Our Locations</div>
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </section>
 
     <script>
       function sleep(ms) {
