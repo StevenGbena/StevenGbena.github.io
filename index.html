@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- Created By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
@@ -307,69 +308,25 @@
         left: 70px;
       }
 
-      .counter-up {
-        /* background-color: ; */
-        width: 90%;
-        min-height: 50vh;
+      .contents {
+        width: 80%;
+        height: 20vh;
+        display: flex;
 
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 0 50px;
+        background-color: #fefefe;
         position: relative;
-        display: flex;
-        align-items: center;
-      }
-      .counter-up::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        height: 60%;
-        width: 100%;
-        background: #fff;
-        border-style: inset;
-      }
-      .counter-up .content {
-        z-index: 1;
-        position: relative;
-        display: flex;
-        width: 100%;
-        height: 100%;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        bottom: 60px;
-      }
-      .counter-up .content .box {
-        /* border: 1px dashed rgba(211, 6, 6, 0.808); */
-        width: calc(25% - 30px);
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
+        align-content: center;
+        left: 90px;
+        padding: 80px 0px;
         justify-content: space-evenly;
-        flex-direction: column;
-        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
-      .content .box .icon {
-        position: relative;
-        font-size: 38px;
-        color: #e6e6e6;
-        right: 100px;
-      }
-      .content .box .counter {
-        position: relative;
-        font-size: 25px;
-        font-weight: 500;
-        bottom: 50px;
-        color: #2c2727;
 
-        font-family: sans-serif;
-      }
-      .content .box .text {
+      .header {
         position: relative;
-        font-weight: 400;
-        color: #ccc;
-        bottom: 50px;
+        left: 45px;
+        bottom: 30px;
       }
 
       /* To the top */
@@ -555,34 +512,16 @@
 
         .count_section {
           position: relative;
-          bottom: 600px;
-          left: 30px;
+          bottom: 490px;
         }
 
-        .counter-up .content .box {
-          width: 100%;
-        }
-
-        .counter-up::before {
-          position: absolute;
-          content: "";
-          top: 0;
-          left: 0;
-          height: 90%;
-          width: 100%;
-          background: #fff;
-        }
-
-        .counter-up .content {
-          z-index: 1;
+        .contents {
+          display: block;
+          height: 65vh;
+          width: 80%;
           position: relative;
-          display: flex;
-          width: 100%;
-          height: 100%;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: space-between;
-          bottom: 30px;
+          left: -10px;
+          padding: 0px 8px;
         }
       }
     </style>
@@ -817,48 +756,30 @@
 
     <section class="count_section">
       <div class="counter-up">
-        <div class="content">
-          <div data-aos="fade-right" class="box">
-            <div class="icon">
-              <i
-                class="fa-solid fa-people-roof fa-4xl"
-                style="color: #0a64ff"
-              ></i>
-            </div>
-            <!-- <div class="counter">50</div> -->
-            <div class="counter">Eye Care</div>
-            <div class="text">Competitve Eye Care</div>
+        <div class="contents">
+          <div class="icon">
+            <i class="fa-regular fa-eye fa-2xl" style="color: #0a47ff"></i>
+            <h5 class="header">Eye Center</h5>
           </div>
-          <div data-aos="fade-right" class="box">
-            <div class="icon">
-              <i
-                class="fa-solid fa-screwdriver-wrench fa-4xl"
-                style="color: #0a64ff"
-              ></i>
-            </div>
-            <div class="counter">Children</div>
-            <div class="text">Specialist in pediatrics</div>
+          <p class="">View Eyes</p>
+          <div class="icon">
+            <i class="fa-solid fa-child fa-2xl" style="color: #2a4aea"></i>
+            <h5 class="header">Children</h5>
           </div>
-          <div data-aos="fade-right" class="box">
-            <div class="icon">
-              <i
-                class="fa-solid fa-helmet-safety fa-4xl"
-                style="color: #0a64ff"
-              ></i>
-            </div>
-            <div class="counter">Lasik</div>
-            <div class="text">Laser Eye</div>
+          <p class="">View Eyes</p>
+          <div class="icon">
+            <i class="fa-solid fa-pen fa-2xl" style="color: #291af4"></i>
+            <h5 class="header">Eye Center</h5>
           </div>
-          <div data-aos="fade-right" class="box">
-            <div class="icon">
-              <i
-                class="fa-solid fa-list-check fa-4xl"
-                style="color: #0a64ff"
-              ></i>
-            </div>
-            <div class="counter">Free Consultation?</div>
-            <div class="text">View Our Locations</div>
+          <p class="">View Eyes</p>
+          <div class="icon">
+            <i
+              class="fa-solid fa-user-doctor fa-2xl"
+              style="color: #0d4cc9"
+            ></i>
+            <h5 class="header">Free Consultation?</h5>
           </div>
+          <p class="">View Eyes</p>
         </div>
       </div>
     </section>
