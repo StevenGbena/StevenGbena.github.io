@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+     <!-- Bootstrap 5 CDN Links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+<!-- Font awesome -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<script
+src="https://kit.fontawesome.com/9c6873f11a.js"
+crossorigin="anonymous"
+></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+            
+            .navbar-brand {
+                font-size: 40px;
+                font-weight: 700;
+                color: #0AEDED;
+                -webkit-text-stroke: #fff 1px;
+            
+            }
+            
+            .navbar-brand:hover {
+                color: #3F3B51;
+            
+            }
+            
+            .navbar-nav .nav-item {
+                margin: 0 10px;
+            }
+            
+            .navbar-nav .nav-link {
+                font-size: 16px;
+                font-weight: 400;
+                color: #fff;
+                display: inline-block;
+            }
+            
+            .dropdown-menu .dropdown-item {
+                margin-bottom: 10px;
+            }
+            
+            .dropdown-menu .dropdown-item:hover {
+                background-color: #008489;
+                color: #fff;
+            }
+            
+            .dropdown-mega .dropdown-menu {
+                width: 100%;
+            }
+            
+            .dropdown-mega h5 {
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgba(0, 0, 0, .125);
+                margin: 0;
+            }
+            
+            .list-group-item {
+                font-size: 16px;
+                color: #3F3B51;
+                border: 0;
+                border-bottom: 1px solid rgba(0, 0, 0, .125);
+                padding: 12px 0;
+            }
+            
+            .list-group-item:hover {
+                color: #008489;
+            }
+            
+            .btn {
+                background-color: #0AEDED;
+            }
+            
+            section {
+                height: 100vh;
+            }
+            footer a{
+                color: #0AEDED;
+            
+            }
+
+            
+            .logo_icon{
+              width: 120px;
+              height: 60px;
+            }
+
+
+
+            .h2_header{
+              font-family: 'Oswald',serif;
+               font-size: 5rem;
+              font-weight: 700;
+               color: black;
+              text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+              text-align: center;
+              margin: 20px 0;
+            }
+
+
+            .treatment_list{
+              position: relative;
+              margin-bottom: 180px;
+            }
+
+            
+            .button-class{
+              background-color: #fff;
+                color:#4A90E2 ;
+              text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+           align-items: center;
+          width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            }
+
+
+            .button-class:hover{
+              background-color: #4A90E2;
+                color:#fff ;
+            }
+
+
+            /* Responsive */
+            @media(max-width: 991.5px) {
+                .navbar-brand {
+                    font-size: 30px
+                }
+            
+                .navbar-nav .nav-item {
+                    margin: 5px 10px;
+                }
+            
+                form {
+                    margin: 30px 0;
+                }
+            }
+      
+     
+
+       .slide::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); 
+      } 
+
+      .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+
+      
+
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            background-size: cover;
+            background-position: center;
+      
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 6rem;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .overlay-text { 
+              font-size: 4.5rem;
+               padding: 15px; }
+
+
+        }
+
+      .section_header {
+        position: relative;
+        margin-top: 120px;
+      }
+      .main_header {
+        text-align: center;
+      }
+
+      .treatment_list {
+        position: relative;
+       
+      }
+
+      .titles {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+     
+
+      .grid-containers {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-items {
+         
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+        @media screen and (max-width: 480px){
+            .grid-containers{
+                grid-template-columns: 1fr;
+            }
+        }
+     
+    </style>
+  </head>
+  <body>
+  
+
+    <header>
+      <nav class="navbar navbar-expand-lg  navbar-light bg-primary   fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="#">     <img class="logo_icon" src="images/healtlogo.jpg"></a>
+              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbar-content">
+                  <i class="fas fa-stream text-white"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                
+                    <li class="nav-item ">
+                        <a class="nav-link active text-white" aria-current="page" href="./index.html">About Us</a>
+                    </li>
+                
+                 
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside">All Treatments</a>
+                        <div class="dropdown-menu shadow">
+                            <div class="mega-content px-md-4">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
+                                            <h2><b>Transplant</b></h2>
+                                            <div class="list-group">
+                                                <a class="list-group-item" href="#">Organ Transplant Surgery</a>
+                                                <a class="list-group-item" href="#">Kidney Transplant</a>
+                                                <a class="list-group-item" href="#">Liver Transplant</a>
+                                                <a class="list-group-item" href="#">Heart Transplant</a>
+                                                <a class="list-group-item" href="#">Pediatric Heart Surgery</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
+                                            <h2><b> Spine Surgery</b></h2>
+                                            <div class="list-group">
+                                                <a class="list-group-item" href="#">Spine Surgery</a>
+                                                <a class="list-group-item" href="#">Lumbar Disc Replacemnet</a>
+                                                <a class="list-group-item" href="#">Minimal Invasive Spine Surgery</a>
+                                                <a class="list-group-item" href="#">Slipped Disc Surgery</a>
+                                                <a class="list-group-item" href="#">Spinal Fusion Surgery</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
+                                            <h3><b>Neurosurgery</b></h3>
+                                            <div class="list-group">
+                                                <a class="list-group-item" href="#">Brain Tumor Surgery</a>
+                                                <a class="list-group-item" href="#">Gamma Knife Surgery</a>
+                                                <a class="list-group-item" href="#">Neurological Disorder Surgery</a>
+                                                <a class="list-group-item" href="#">Epilepsy Surgery</a>
+                                                <a class="list-group-item" href="#">Deep Brain Stimulation</a>
+                                                <a class="list-group-item" href="#">Multiple Sclerosis</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
+                                            <h2><b>Treatment</b></h2>
+                                            <div class="list-group">
+                                                <a class="list-group-item" href="#">All Types Of Cancer Treatment</a>
+                                                <a class="list-group-item" href="#">Intro Viro  Fertilization(IVF)</a>
+                                                <a class="list-group-item" href="#">Advance Robotic Physiotherapy</a>
+                                                <a class="list-group-item" href="#">Hip Replacement </a>
+                                                <a class="list-group-item" href="#">Knee Replacement</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="./Contacts.html" tabindex="-1" aria-disabled="true">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto">
+                    <div class="input-group">
+                        
+                      <a href="./Quotes.html" class="button-class">Get Free Quote</a>
+                    </div>
+                </form>
+            </div>
+          </div>
+      </nav>
+  </header>
+
+    <!-- Services Pages -->
+    <div class="slideshow-container">
+       
+      <div class="slide" style="background-image: url(./images/medservi.jpg);"></div>
+
+      <div class="overlay-text">Our Treatments</div>
+  </div>
+
+  
+    <!-- Treatments -->
+    <section class="treatment_list">
+      
+      <div class="grid-containers">
+        <div class="grid-items">
+            <h3 class="titles">
+                <img src="images/cardio.png" /><br />Cardiology
+              </h3>
+              
+          <ul class="class_type">
+            <li>Coronary Artery Bypass Graft (CABG) Surgery</li>
+            <li>Angioplasty and Stenting</li>
+            <li>Heart Valve Replacement and Repair</li>
+            <li>Transcatheter Aortic Valve Replacement (TAVR)</li>
+            <li>Implantable Cardioverter Defibrillator (ICD) Implantation</li>
+            <li>Pacemaker Implantation</li>
+            <li>Electrophysiology Studies (EPS)</li>
+            <li>Left Ventricular Assist Device (LVAD) Implantati
+                on</li>
+            <li>Pediatric Cardiac Surgeries (e.g., ASD, VSD repair)</li>
+            <li>Heart Transplant</li>
+            <li>Balloon Valvuloplasty</li>
+            <li>Cardiac Resynchronization Therapy (CRT)</li>
+          </ul>
+            </div>
+
+            <div class="grid-items">
+                <h3 class="titles">
+                    <img src="images/cancer.png" /><br />Cancer Treatment
+                  </h3>
+                  
+              <ul class="class_type">
+                <li>Chemotherapy</li>
+                <li>Radiation Therapy (IMRT, SBRT, Proton Therapy)</li>
+                <li>Immunotherapy</li>
+                <li>Targeted Therapy</li>
+                <li>Bone Marrow Transplant</li>
+                <li>Surgical Oncology (Tumor Resections)</li>
+                <li>CyberKnife and Gamma Knife Radiosurgery</li>
+                <li>Liver Transplant for Liver Cancer</li>
+                <li>HIPEC (Hyperthermic Intraperitoneal Chemotherapy)</li>
+                <li>Supportive Care and Counseling</li>
+              </ul>
+                </div>
+
+                <div class="grid-items">
+                    <h3 class="titles">
+                        <img src="images/neurosurgery.png" /><br />Neurosurgery
+                      </h3>
+                      
+                  <ul class="class_type">
+                    <li>Brain Tumor Surgery</li>
+                    <li>Microdiscectomy for Herniated Disc</li>
+                    <li>Deep Brain Stimulation (DBS) for Movement Disorders</li>
+                    <li>Stereotactic Radiosurgery (Gamma Knife, CyberKnife)</li>
+                    <li>Aneurysm Clipping and Coiling</li>
+                    <li>Spinal Tumor Surgery</li>
+                    <li>Chiari Malformation Decompression Surgery</li>
+                  </ul>
+                    </div>
+
+                    <div class="grid-items">
+                        <h3 class="titles">
+                            <img src="images/orrthopedic.png" /><br />Orthopedics
+                          </h3>
+                          
+                      <ul class="class_type">
+                        <li>Knee Replacement Surgery (Total and Partial)</li>
+                        <li>Shoulder Replacement Surgery</li>
+                        <li>Arthroscopic Surgery (Knee, Shoulder, Hip)</li>
+                        <li>Spinal Surgery (Fusion, Microdiscectomy, Decompression))</li>
+                        <li>
+                          Fracture Fixation Surgery (using plates, screws, intramedullary
+                          nails)
+                        </li>
+                        <li>Osteotomy (Realignment of bones)</li>
+                        <li>Scoliosis Correction Surgery</li>
+                        <li>Total Ankle Replacement Surgery</li>
+                        <li>Revision Joint Surgery</li>
+                        <li>ACL reconstruction</li>
+                      </ul>
+                        </div>
+
+                        <div class="grid-items">
+                            <h3 class="titles">
+                                <img src="images/gastro.png" /><br />Gastroenterology
+                              </h3>
+                              
+                          <ul class="class_type">
+                            <li>Bariatric Surgery (Weight Loss Surgery)</li>
+                            <li>Liver Transplant</li>
+                            <li>Endoscopic Procedures (EGD, Colonoscopy)</li>
+                            <li>Gastrointestinal Surgery (e.g., Gallbladder Removal)</li>
+                            <li>Pancreatic Surgery (Whipple Procedure)</li>
+                            <li>Management of Inflammatory Bowel Disease (IBD)</li>
+                          </ul>
+                            </div>
+
+
+                            <div class="grid-items">
+                                <h3 class="titles">
+                                    <img src="images/opthamologist.png" /><br />Opthamology
+                                  </h3>
+                                  
+                              <ul class="class_type">
+                                <li>Cataract Surgery (Phacoemulsification, Laser-assisted)</li>
+                                <li>LASIK and Refractive Eye Surgery</li>
+                                <li>Retinal Surgery (e.g., Vitrectomy)</li>
+                                <li>Corneal Transplantation</li>
+                              </ul>
+                                </div>
+
+
+                                <div class="grid-items">
+                                    <h3 class="titles">
+                                        <img src="images/ent.png" /><br />Ear Nose Throat(ENT)
+                                      </h3>
+                                      
+                                  <ul class="class_type">
+                                    <li>Endoscopic Sinus Surgery</li>
+                                    <li>Tonsillectomy and Adenoidectomy</li>
+                                    <li>Cochlear Implants</li>
+                                  </ul>
+                                    </div>
+
+
+                                    <div class="grid-items">
+                                        <h3 class="titles">
+                                            <img src="images/stemcel.png" /><br />Stem Cell
+                                          </h3>
+                                          
+                                      <ul class="class_type">
+                                        <li>Bone Marrow Transplant (Autologous and Allogeneic)</li>
+                                        <li>
+                                          Stem Cell Therapy for Various Conditions (e.g., arthritis,
+                                          neurological disorders)
+                                        </li>
+                                        <li>Treatment for Aplastic Anemia</li>
+                                        <li>Management of Hematological Malignancies (such as leukemia)</li>
+                                      </ul>
+                                        </div>
+
+
+                                        <div class="grid-items">
+                                            <h3 class="titles">
+                                                <img src="images/urology.png" /><br />Urology</h3>
+                                              </h3>
+                                              
+                                          <ul class="class_type">
+                                            <li>Robotic Prostatectomy</li>
+                                            <li>Kidney Stone Removal (PCNL, URS)</li>
+                                            <li>Bladder Cancer Surgery</li>
+                                            <li>Urinary Diversion Surgery</li>
+                                            <li>
+                                              Male Infertility Treatments (e.g., Varicocele Surgery, TESE)
+                                          </ul>
+                                            </div>
+                                            <div class="grid-items">
+                                                <h3 class="titles">
+                                                    <img src="images/spine.png" /><br />Spine Surgery
+                                                  </h3>
+                                                  
+                                              <ul class="class_type">
+                                                <li>Minimally Invasive Spine Surgery (MISS)</li>
+                                                <li>Microdiscectomy (for herniated discs)</li>
+                                                <li>Laminectomy and Laminotomy (for spinal stenosis)</li>
+                                                <li>Cervical and Lumbar Disc Replacement</li>
+                                                <li>
+                                                  Kyphoplasty and Vertebroplasty (for vertebral compression
+                                                  fractures)
+                                                </li>
+                                                <li>Scoliosis Correction Surgery</li>
+                                                <li>Artificial Disc Replacement</li>
+                                                <li>Spinal Tumor Surgery</li>
+                                                <li>Endoscopic Spine Surgery</li>
+                                                <li>Microdiscectomy for Herniated Disc</li>
+                                                <li>Spinal Tumor Removal Surgery</li>
+                                                <li>Decompression Surgery for Chiari Malformation</li>
+                                                <li>Stereotactic Neurosurgery (for spinal lesions)</li>
+                                              </ul>
+                                                </div>
+                                                <div class="grid-items">
+                                                    <h3 class="titles">
+                                                        <img src="images/ivf.png" /><br />In Vitro Fertilization
+                                                      </h3>
+                                                      
+                                                  <ul class="class_type">
+                                                    <li>In Vitro Fertilization (IVF)</li>
+                                                    <li>Intracytoplasmic Sperm Injection (ICSI)</li>
+                                                    <li>Intrauterine Insemination (IUI)</li>
+                                                    <li>Egg Donation</li>
+                                                    <li>Sperm Donation</li>
+                                                    <li>Embryo Donation</li>
+                                                    <li>Frozen Embryo Transfer (FET)</li>
+                                                    <li>Laparoscopy for Endometriosis</li>
+                                                    <li>Hysteroscopy for Uterine Issues</li>
+                                                    <li>Tubal Reversal Surgery</li>
+                                                    <li>Varicocele Repair</li>
+                                                    <li>Preimplantation Genetic Testing (PGT)</li>
+                                                    <li>Fertility Preservation (Egg/Sperm Freezing)</li>
+                                                  </ul>
+                                                    </div>
+        </div>
+
+
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-chevron-up fa-xl" style="color: #ffffff;"></i></button>
+
+
+  <!-- Footer -->
+      
+     
+  
+        </section>
+  
+  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script> -->
+    
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+
+      
+<script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+  
+
+ <!-- Bootstrap 5 JS CDN Links -->
+
+  </body>
+</html>

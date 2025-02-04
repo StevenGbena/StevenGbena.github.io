@@ -1,0 +1,1583 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare</title>
+
+  <!-- Bootstrap 5 CDN Links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+<!-- Font awesome -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<script
+src="https://kit.fontawesome.com/9c6873f11a.js"
+crossorigin="anonymous"
+></script>
+
+    <!-- Custom File's Link -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;900&display=swap');
+       
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      
+      body {
+            font-family: 'Roboto Slab', serif;
+            padding: 0;
+            margin: 0;
+        /* font-family: "Open Sans", sans-serif; */
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 20px;
+        /* padding-bottom: 1000px; */
+           font-family: "Montserrat", sans-serif;
+           min-width: 100%;
+         overflow-x: hidden; 
+          min-height: 100vh;
+}
+
+  /* Start Navbar */
+      button:focus,
+        .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+      }
+   
+            
+
+            .logo_icon{
+              width: 120px;
+              height: 60px;
+            }
+            
+            .navbar-nav .nav-item {
+                margin: 0 10px;
+            }
+            
+            .navbar-nav .nav-link {
+                font-size: 16px;
+                font-weight: 400;
+                color: #fff;
+                display: inline-block;
+            }
+            
+            .dropdown-menu .dropdown-item {
+                margin-bottom: 10px;
+            }
+            
+            .dropdown-menu .dropdown-item:hover {
+                background-color: #008489;
+                color: #fff;
+            }
+            
+            .dropdown-mega .dropdown-menu {
+                width: 100%;
+            }
+            
+            .dropdown-mega h5 {
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgba(0, 0, 0, .125);
+                margin: 0;
+            }
+            
+            .list-group-item {
+                font-size: 16px;
+                color: #3F3B51;
+                border: 0;
+                border-bottom: 1px solid rgba(0, 0, 0, .125);
+                padding: 12px 0;
+            }
+            
+            .list-group-item:hover {
+                color: #008489;
+            }
+            
+
+            .button-class{
+              background-color: #fff;
+                color:#4A90E2 ;
+              text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+           align-items: center;
+          width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            }
+
+
+            .button-class:hover{
+              background-color: #4A90E2;
+                color:#fff ;
+            }
+/* 
+            .btn {
+                background-color: #fff;
+                color:#4A90E2 ;
+            } */
+          
+            /* .btn:hover{
+               color: #fff;
+                background-color:#4A90E2;
+            } */
+
+            /* Start Heading For Sldieshow */
+            .h1_header{
+              font-family: 'Oswald',serif;
+               font-size: 5.5rem;
+              font-weight: 900;
+               color: black;
+              text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+              text-align: center;
+              margin: 20px 0;
+            }
+
+
+
+            .h2_header{
+              font-family: 'Oswald',serif;
+               font-size: 3.5rem;
+              font-weight: 700;
+               color: black;
+              text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+              text-align: center;
+              margin: 20px 0;
+            }
+
+
+
+            .small{
+              text-align: center;
+              position: relative;
+              margin-left: 150px;
+              text-decoration: underline;
+            }
+            /* End Heading for slideshow */
+           
+            .carousel-item::before {
+              content: "";
+             display: block;
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background-color: rgba(
+             0,
+             0,
+             0,
+            0.5
+            ); /* Change the color and opacity as needed */
+            }
+/* End Slideshow */
+          
+    
+/* Start of Counter up */
+        .icon-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 icons in a row for large screens */
+            gap: 20px;
+            padding: 20px;
+            justify-items: center; /* Center icons horizontally */
+            background-color:#20C997;
+        }
+
+/* Styling for each icon item */
+        .icon-item {
+ 
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+      .text{
+      color: #000;
+      font-weight: 700;
+      }
+
+
+
+      .read-more-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .read-more-text {
+            display: none;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #20C997;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+       
+        }
+
+        .read-more-btn:hover {
+            background-color: #fff;
+            color: #4A90E2;
+        }
+
+/* End Counter Up */
+
+
+/* Who we are */
+
+/* StarT pOPULAR treatment */
+.Popular_treatment{
+    position: relative;
+    margin-top: 120px;
+    background-color:#f5f5f5 ;
+    height: 100vh;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+
+
+.view_all{
+  background-color: #20C997;
+            color: white;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+           align-items: center;
+          width: 80%;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+}
+
+
+.view_all:hover {
+            background-color: #fff;
+            color: #4A90E2;
+        }
+
+/* End Popular  Treatment*/
+
+
+/* Start Service */
+/* Our Services */
+.services {
+  position: relative;
+   margin-top: 190px; 
+  text-align: center;
+  background-color: #f5f5f5;
+  width: auto;
+  height: auto;
+}
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 20px; /* Space between items */
+    padding: 10px;
+}
+
+.grid-item {
+    background-color:  #20C997;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.service_header{
+  color: #000;
+  font-family: 'Oswald',serif;
+               font-size: 2rem;
+              font-weight: 700;
+        
+              text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+}
+/* End Services */
+
+
+/* WHWY CHOOSE US */
+.why_choose{
+  position: relative;
+  margin-top: 170px;
+}
+.containers {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .image-containers {
+            flex: 0 0 30%;
+            max-width: 30%;
+            padding-right: 20px;
+        }
+
+        .image-containers img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .heading {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .icon-grid {
+            display: flex;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+        }
+
+    
+
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            /* background-color: w; */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+         .icon i {
+            font-size: 3rem;
+     
+    
+        
+        } 
+
+         .icon .text {
+            font-size: 1rem;
+            color: #333;
+            display: flex;
+                
+
+        } 
+
+        .text h2 {
+            margin: 0 0 5px ;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .text p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+
+
+
+/* END WHY CHOOSE IS */
+
+/* Start Our hsopuals */
+.our_hospitals{
+  position: absolute;
+  margin-top: 40px;
+}
+.title{
+          text-align: center;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: auto;
+            background-color: #f9f9f9;
+            padding: 20px 0;
+             position:relative; 
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+            /* animation-duration: 9s; */
+        }
+
+        .marquee-item {
+            display: inline-block;
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        .marquee-item img {
+            width: 300px;
+            height: 290px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .marquee-item p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+
+/* end our hospiyals */
+
+/* Start Testimonials */
+.testimonial{
+    position: relative;
+    margin-top: 590px;
+}
+
+
+
+.titling{
+            text-align: center;
+        }
+
+
+
+        .grid-containers {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-items {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-items img {
+            width: 450px;
+            height: 400px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .grid-items .caption {
+            font-size: 1rem;
+            color: #333;
+        }
+/* End of testimonuals */
+
+a{
+  text-decoration: none;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* Responsive for mobile view */
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 50%;
+  }
+}
+/* End of popular treatmrnt */
+
+
+/* Counter Up Mobile view */
+@media screen and (max-width: 1036px) {
+  .counter-up {
+    padding: 50px 50px 0 50px;
+  }
+  .counter-up .content .box {
+    width: calc(50% - 30px);
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .counter-up .content .box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding: 20px;
+  }
+  .counter-up {
+    padding: 30px 20px 0 20px;
+  }
+}
+
+/* End Counter Up Mobilr View */
+
+/* Responsive */
+@media(max-width: 991.5px) {
+
+   
+
+    .navbar-brand {
+        font-size: 30px
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 10px;
+    }
+
+    form {
+        margin: 30px 0;
+    }
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 480px){
+    /* slidehow headinf */
+  body{
+    overflow-x: hidden;
+  }
+
+
+    .h1_header{
+      font-size: 3.5rem;
+      position: relative;
+      margin-top: 90px;
+
+      
+    }
+
+
+
+    /* Start Who we are  */
+    .who_we_are {
+    position: relative;
+    margin-top: 60px;
+  }
+
+  
+  .heading {
+    font-size: 40px;
+  }
+  /* End of wHO we are */
+
+
+/* Counter icons */
+
+
+
+
+
+/* End counter */
+
+
+
+
+
+  /* serives */
+  .grid-container {
+        grid-template-columns: 1fr; /* Stack the items in one column */
+    }
+
+  /* End of serives */
+
+  /* Start Testimonias */
+
+  
+
+  .test {
+    position: relative;
+    margin-top: 780px;
+
+
+  }
+
+
+.overall{
+    background-color:goldenrod ;
+    height: 230vh;
+}
+
+.services{
+  height: 250vh;
+}
+
+/* End Service */
+
+
+
+
+/* why choose us / also use for tablets*/
+.containers {
+              position: relative;
+          
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .image-containers {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .icon-grid {
+              position: relative;
+              margin-top: 130px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+         
+        }
+
+
+        /* Our hospita; */
+  .title{
+    text-align: center;
+}
+
+   .marquee-container{
+      width: 100%;
+      position: absolute;
+}
+
+
+/* Our testimonials/ Alos for tablets */
+.grid-containers {
+                grid-template-columns: 1fr;
+            }
+
+
+            .grid-items{
+              width: auto;
+            }
+
+
+             .grid-items img{
+                width: 200px;
+                height: 200px;
+            }
+
+            .caption{
+                word-wrap: none;
+            }
+
+
+            /* view */
+            .view_all{
+              width: 50%;
+              align-items: center;
+              position: relative;
+              margin-left: 130px;
+              text-align: center;
+              cursor: grab;
+            }
+}
+
+
+        /* Responsive */
+        @media(max-width: 991.5px) {
+                .navbar-brand {
+                    font-size: 30px
+                }
+            
+                .navbar-nav .nav-item {
+                    margin: 5px 10px;
+                }
+            
+             
+            }
+      
+
+
+
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+    .icon-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 icons per row on small screens */
+        grid-template-rows: repeat(2, 1fr); /* 2 rows on small screens */
+    }
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+      <nav       class="navbar navbar-expand-lg  navbar-light bg-primary   ">
+        <div class="container">
+          <a class="navbar-brand" href="#">     <img class="logo_icon" src="images/healtlogo.jpg"></a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-content">
+                <i class="fas fa-stream text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-white">
+                  <li class="nav-item">
+                      <a class="nav-link active text-white" aria-current="page" href="./index.html">Home</a>
+                  </li>
+              
+                  <li class="nav-item">
+                      <a class="nav-link active text-white" aria-current="page" href="#About_us">About Us</a>
+                  </li>
+              
+               
+                  <li class="nav-item dropdown dropdown-mega position-static">
+                      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside">All Treatments</a>
+                      <div class="dropdown-menu shadow">
+                          <div class="mega-content px-md-4">
+                              <div class="container-fluid">
+                                  <div class="row">
+                                      <div class="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
+                                          <h2><b>Transplant</b></h2>
+                                          <div class="list-group">
+                                              <a class="list-group-item" href="./Services.html">Organ Transplant Surgery</a>
+                                              <a class="list-group-item" href="./Services.html">Kidney Transplant</a>
+                                              <a class="list-group-item" href="./Services.html">Liver Transplant</a>
+                                              <a class="list-group-item" href="./Services.html">Heart Transplant</a>
+                                              <a class="list-group-item" href="./Services.html">Pediatric Heart Surgery</a>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
+                                          <h2><b> Spine Surgery</b></h2>
+                                          <div class="list-group">
+                                              <a class="list-group-item" href="./Services.html">Spine Surgery</a>
+                                              <a class="list-group-item" href="./Services.html">Lumbar Disc Replacemnet</a>
+                                              <a class="list-group-item" href="./Services.html">Minimal Invasive Spine Surgery</a>
+                                              <a class="list-group-item" href="./Services.html">Slipped Disc Surgery</a>
+                                              <a class="list-group-item" href="./Services.html">Spinal Fusion Surgery</a>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
+                                          <h3><b>Neurosurgery</b></h3>
+                                          <div class="list-group">
+                                              <a class="list-group-item" href="./Services.html">Brain Tumor Surgery</a>
+                                              <a class="list-group-item" href="./Services.html">Gamma Knife Surgery</a>
+                                              <a class="list-group-item" href="./Services.html">Neurological Disorder Surgery</a>
+                                              <a class="list-group-item" href="./Services.html">Epilepsy Surgery</a>
+                                              <a class="list-group-item" href="./Services.html">Deep Brain Stimulation</a>
+                                              <a class="list-group-item" href="./Services.html">Multiple Sclerosis</a>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
+                                          <h2><b>Treatment</b></h2>
+                                          <div class="list-group">
+                                              <a class="list-group-item" href="./Services.html">All Types Of Cancer Treatment</a>
+                                              <a class="list-group-item" href="./Services.html">Intro Viro  Fertilization(IVF)</a>
+                                              <a class="list-group-item" href="./Services.html">Advance Robotic Physiotherapy</a>
+                                              <a class="list-group-item" href="./Services.html">Hip Replacement </a>
+                                              <a class="list-group-item" href="./Services.html">Knee Replacement</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white " href="./Contacts.html" tabindex="-1" aria-disabled="true">Contact Us</a>
+                  </li>
+              </ul>
+              <form class="d-flex ms-auto">
+                  <div class="input-group">
+                      
+                   
+                      <a href="./Quotes.html" class="button-class">Get Free Quote</a>
+                  </div>
+              </form>
+          </div>
+        </div>
+    </nav>
+    </header>
+<!-- 
+   
+      <!-- SlideShow  -->
+      <div
+      id="carouselExampleCaptions"
+      class="carousel slide carousel-fade"
+      data-bs-interval="5000"
+      data-bs-touch="true"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="2000">
+          <img src="images/ghXin.jpg" style="width: 100%; height: 100vh" />
+          <div class="carousel-caption">
+            <h1 class="h1_header">
+              Are You Looking For<font color=" #20C997"> Advanced</font>
+              <p><font color="#fff"> Medical Treatment in</font></p>
+              <p style="color: #20C997 ; font-size: 70px; font-weight: 900">
+                India?
+              </p>
+              <br />
+              <!-- <span id="typewriter"></span><span id="cursor">|</span> -->
+            </h1>
+            <h2
+              style="
+                font-size: 15px;
+                letter-spacing: 5px;
+                font-family: Great Vibes, cursive;
+                font-weight: 400;
+                font-style: normal;
+              "
+            ></h2>
+         
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="1000">
+          <img src="images/indiahealth.jpg" style="width: 100%; height: 100vh" />
+          <div class="carousel-caption">
+            <h1 class="h1_header">
+              Are You Looking For <font color=" #20C997"> Advanced</font>
+              <p><font color="#fff"> Medical Treatment in</font></p>
+              <p style="color: #20C997; font-size: 70px; font-weight: 900">
+                India?
+              </p>
+              <br />
+              <!-- <span id="typewriter"></span><span id="cursor">|</span> -->
+            </h1>
+
+            <h2
+              style="
+                font-size: 15px;
+                letter-spacing: 5px;
+                font-family: Great Vibes, cursive;
+                font-weight: 400;
+                font-style: normal;
+              "
+            ></h2>
+           
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="images/nurse.jpg"
+            style="width: 100%; height: 100vh"
+          />
+          <div class="carousel-caption">
+            <h1 class="h1_header">
+              Are You Looking For <font color=" #20C997"> Advanced</font>
+              <p><font color="#fff"> Medical Treatment in</font></p>
+              <p style="color:  #20C997; font-size: 70px; font-weight: 900">
+                India?
+              </p>
+              <br />
+              <!-- <span id="typewriter"></span><span id="cursor">|</span> -->
+            </h1>
+            <h2
+              style="
+                font-size: 15px;
+                letter-spacing: 5px;
+                font-family: Great Vibes, cursive;
+                font-weight: 400;
+                font-style: normal;
+              "
+            ></h2>
+           
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+<!-- end of slideshow -->
+
+
+    <!-- What we Dd -->
+    <div class="icon-container">
+      <div class="icon-item">      
+        <i class="fa-solid fa-hospital fa-2xl" style="color: #fff;"></i>
+            <p class="text">Verified Hospitals</p>
+            </div>
+
+            <div class="icon-item">      
+              <i
+              class="fa-solid fa-user-doctor fa-2xl"
+              style="color: #fff"
+            ></i>
+                  <p class="text">Free Expert Medical Options</p>
+                  </div>    
+    
+      <div class="icon-item">   <i class="fa-solid fa-venus-mars fa-2xl" style="color: #fff"></i>
+      <p class="text">24/7 Patient Assistance</p>
+      </div>
+      <div class="icon-item"> <i
+        class="fa-solid fa-group-arrows-rotate fa-2xl"
+        style="color: #fff"
+      ></i>
+      <p class="text">Compare Cost Get Best Package</p>
+    </div>
+  </div>
+      <!--End of counter Up --> 
+
+
+        <!-- Start of Who we are -->
+      <section  id="About_us">
+        <div class="who_we_are">
+          <h1 class="h1_header">Welcome to <font color="#4A90E2">HealthCare</font></h1>
+          <small class="small">WHO WE ARE</small>
+          <div class="read-more-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus totam eveniet ab, repudiandae esse quibusdam, rem aliquid eos ea nisi iste, porro asperiores provident non alias laboriosam. Non, quia. Molestias? <span id="moreText" class="read-more-text">Here is the additional content that is hidden until the user clicks the Read More button. You can add any details or extended explanation here.</span>
+            </p>
+            <button class="read-more-btn" id="readMoreBtn" onclick="toggleReadMore()">Read More</button>
+        </div>
+        
+        </div>
+      </section>
+      <!-- End of how we are  -->
+
+
+
+
+       <!-- Popular Treatment  -->
+    <section class="Popular_treatment">
+        <div >
+
+   
+        <h1 class="h2_header"><font color="#000">Popular <font color="#4A90E2">Treatments</font></font></h1>
+  
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="./Services.html">
+                <img
+                  src="images/cardio.png"
+                  alt="Cinque Terre"
+                  width="300"
+                  height="10"
+                />
+              </a>
+              <div class="desc">Cardiology</div>
+            </div>
+          </div>
+          
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="./Services.html">
+                <img
+                  src="images/neurosurgery.png"
+                  alt="Forest"
+                  width="600"
+                  height="10"
+                />
+              </a>
+              <div class="desc">Neurosurgery</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="./Services.html">
+                <img
+                  src="images/cancer.png"
+                  alt="Northern Lights"
+                  width="600"
+                  height="10"
+                />
+              </a>
+              <div class="desc">Cancer Treatment</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="./Services.html">
+                <img
+                  src="images/orrthopedic.png"
+                  alt="Mountains"
+                  width="600"
+                  height="10"
+                />
+              </a>
+              <div class="desc">Orthopedics</div>
+            </div>
+          </div>
+          <!-- <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_mountains.jpg">
+                <img
+                  src="images/opthamologist.png"
+                  alt="Mountains"
+                  width="600"
+                  height="10"
+                />
+              </a>
+              <div class="desc">Opthamology</div>
+            </div>
+          </div> -->
+     
+          
+          <!-- <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_mountains.jpg">
+                <img
+                  src="images/urology.png"
+                  alt="Mountains"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">Urology</div>
+            </div>
+          </div> -->
+
+      
+
+          <!-- <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_mountains.jpg">
+                <img
+                  src="images/transplant.png"
+                  alt="Mountains"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">Transplant</div>
+            </div>
+          </div>
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_mountains.jpg">
+                <img
+                  src="images/spine.png"
+                  alt="Mountains"
+                  width="600"
+                  height="10"
+                />
+              </a>
+              <div class="desc">Spine Surgery</div>
+            </div>
+          </div>
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_mountains.jpg">
+                <img
+                  src="images/ivf.png"
+                  alt="Mountains"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">IVF Treatment</div>
+            </div> -->
+
+          </div>
+          <a href="./Services.html" class="view_all">View All</a>
+      </section>
+
+     
+      <section class="services">
+        <h2 class="h2_header">Our <font color="#4A90E2">Services</font></h2>
+        <small class="small">WHAT WE OFFER</small>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h1 class="service_header">Medical Consultation</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga eius quisquam soluta possimus hic quibusdam. Est, rerum in! Ipsa, obcaecati. Molestias fugit maiores tenetur at voluptatum numquam non ex esse.</p>
+            </div>
+            <div class="grid-item">
+                <h1 class="service_header">Treatment Planning & Cost Estimation</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga eius quisquam soluta possimus hic quibusdam. Est, rerum in! Ipsa, obcaecati. Molestias fugit maiores tenetur at voluptatum numquam non ex esse.</p>
+            </div>
+            <div class="grid-item">
+                <h1 class="service_header">Visa Assistance & Travel Arrangement</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga eius quisquam soluta possimus hic quibusdam. Est, rerum in! Ipsa, obcaecati. Molestias fugit maiores tenetur at voluptatum numquam non ex esse.</p>   
+            </div>
+            <div class="grid-item">
+                <h1 class="service_header">Apartment /Hotel Accodmation</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga eius quisquam soluta possimus hic quibusdam. Est, rerum in! Ipsa, obcaecati. Molestias fugit maiores tenetur at voluptatum numquam non ex esse.</p>
+            </div>
+            <div class="grid-item">  
+                 <h1 class="service_header">Pre & Post Treatment Care</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga eius quisquam soluta possimus hic quibusdam. Est, rerum in! Ipsa, obcaecati. Molestias fugit maiores tenetur at voluptatum numquam non ex esse.</p></div>
+          
+        </div>
+
+      </section>
+
+
+
+      <!-- WHY CHOOSE US -->
+      <section class="why_choose">
+        <h1 class="h2_header">Why <font color="#4A90E2">Choose Us</font></h1>
+        <small class="small">Reason why to choose us</small>
+      <div class="containers">
+        <div class="image-containers">
+            <img src="images/friendly.jpg" alt="Placeholder Image">
+        </div>
+        <div class="content">
+          
+            <div class="icon-grid">
+                <div class="icon">
+                    <i class="fa-solid fa-hand-holding-dollar fa-2xl" style="color:  #20C997;"> 
+                       </i>
+                
+                </div>
+                <div class="text">
+                    <h2>Reasonable Price</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+                </div> 
+             
+           
+                <div class="icon"> <i class="fa-solid fa-snowflake" style="color: #20C997;"></i></div>
+                <div class="text">
+                    <h2>Fast Processing</h2>
+                    <p>This is a descriptive text for the icon displayed on the left.</p>
+                </div> 
+             
+                <div class="icon"><i class="fa-regular fa-building" style="color:  #20C997;"></i></div>
+                <div class="text">
+                    <h2>Trusted Company</h2>
+                    <p>This is a descriptive text for the icon displayed on the left.</p>
+                </div> 
+             
+                <div class="icon">     <i
+                  class="fa-solid fa-user-doctor fa-2xl"
+                  style="color:  #20C997"
+                ></i></div>
+                <div class="text">
+                    <h2>Multiple Expertise Consultation</h2>
+                    <p>This is a descriptive text for the icon displayed on the left.</p>
+                </div> 
+             
+            </div>
+           
+        </div>
+    </div>
+  </section>
+      <!-- END WHY CHOOSE US -->
+
+
+
+     
+      <!-- Our Hospitals -->
+      <section class="our_hospitals">
+        <h1 class="h2_header">Our <font color="#4A90E2">Verified Hospitals</font> </h1>
+        <small class="small">Trusted Hospitals</small>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="marquee-item">
+                    <img src="images/apexhospital.jpg" alt="Image 1">
+                    <h2><b><font color="#4A90E2">Apex Hospitals</font></b></h2>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/eternal.jpg" alt="Image 2">
+                    <h2><b><font color="#4A90E2">Eternal Hospitals</font></b></h2>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/fortis.jpg" alt="Image 3">
+                    <h2><b><font color="#4A90E2">Fortis Hospitals</font></b></h2>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/Mangalam.jpg" alt="Image 4">
+                    <h2><b><font color="#4A90E2">Mangalam Hospitals</font></b></h2>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/manipal.jpeg" alt="Image 4">
+                    <h2><b><font  color="#4A90E2">Manipal  Hospitals</font></b></h2>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/narayana.jpg" alt="Image 4">
+                    <h2><b><font color="#4A90E2">Narayana Multispeciality Hospitals</font></b></h2>
+                </div>
+                <div class="marquee-item">
+                  <img src="images/ck_billar.jpg" alt="Image 4">
+                  <h2><b><font color="#4A90E2">CK Birla Hospitals</font></b></h2>
+              </div>
+              <div class="marquee-item">
+                <img src="images/blk-max.jpg" alt="Image 4">
+                <h2><b><font color="#4A90E2">BLK-MAX Hospitals</font></b></h2>
+            </div>
+            </div>
+        </div>
+
+
+
+      </section>
+
+
+
+
+
+      <!-- End Hospitals -->
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-chevron-up fa-xl" style="color: #ffffff;"></i></button>
+       <!-- OUR TESTIMONIALS -->
+    <section class="testimonial">
+      <h1 class=" h2_header">Our <font color="#4A90E2">Testimonials</font> </h1>
+      <small class="small">Satisfied Clients</small>
+      <div class="grid-containers">
+          <div class="grid-items">
+              <img src="images/testimonial1.jpg" alt="Image 1">
+             
+              <div class="caption"> <h2>CARDIAC SURGERY IN INDIA- TETRALOGY OF FALLOT SURGFERY IN INDIA</h2>A baby  who is 6 years old, was treated with Tetralogy of Fallot. The boy was facing the problem in breathing, loss of consciousness, cyanosis, fatigue, and a heart murmur.We are extremely satisfied with the treatment processed by Dr. CP Shrivastava at Narayana Hospital</div>
+          </div>
+          <div class="grid-items">
+              <img src="images/testimonial2.jpg" alt="Image 2">
+              <div class="caption"><h2>MITRAL VALVE REPLACEMENT SURGERY IN INDIA</h2>.
+                A 19 years old boy Abdulla came to India for mitral valve replacement. When he reached india his heart was only 18% working with various other complications. Previously patient planed to operate in Delhi but due to high complications and cost patient switch to Jaipur in government institution</div>
+          </div>
+          <div class="grid-items">
+              <img src="images/testimonial6.jpg" alt="Image 2">
+              <div class="caption"><h2>VP SHUNT SURGERY IN INDIA</h2>Naqib, a year old baby has been struggling with 
+                  We are extremely satisfied with the treatment processed by Dr. KK Bansal at Narayana Hospital </div>
+          </div>
+          <div class="grid-items">
+              <img src="images/testimonial3.jpg" alt="Image 3">
+              <div class="caption"><h2>CARDIAC TREATMENT IN INDIA</h2></div>
+          </div>
+          <div class="grid-items">
+              <img src="images/testimonial4.jpg" alt="Image 4">
+              <div class="caption"><h2>VASCULAR SURGERY IN INDIA TO GET RID OF DEEP VEIN THROMBOSIS (DVT)</h2>Cristiana had a fruitful and smooth going life until she encountered when her lower left leg started to ache. She was facing symptoms like swelling, pain, and red or discolored skin on the leg. In the initial phase, she did not bother about the pain and thought of it as a minor issue. But with the passage of time, the pain increases and become severe.
+                  was suffering from Deep vein thrombosis (DVT),with the treatment done by Dr. Rajendra Bansal/div>
+          </div>
+      </div>
+      <div class="grid-items">
+          <img src="images/testimonial5.jpg" alt="Image 4">
+          <div class="caption"><h2>HIP REPLACEMENT IN INDIA</h2><div>
+      </div>
+  </div>
+        
+    </section>
+
+
+    <section class="main_footers">
+    
+      <!-- Footer -->
+        <!-- Footer -->
+<footer   style='background-color:  #4A90E2;'class="text-center text-lg-start  text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span style="color: #fff;"">Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-white">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-white">
+        <i  class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-white">
+        <i   class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-white">
+        <i     class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-white">
+        <i  class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-white">
+        <i     class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-white">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-white">
+            <i     class="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p  >
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4  text-white">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Services
+          </h6>
+          <p>
+            <a        href="#!" class="text-reset">Medical Consultation</a>
+          </p>
+          <p>
+            <a  href="#!" class="text-reset">Treatment Planning & Cost Estimation</a>
+          </p>
+          <p>
+            <a   href="#!" class="text-reset">Visa Assistance & Travel Arrangement</a>
+          </p>
+          <p>
+            <a     href="#!" class="text-reset">Pre & Post Care Treatment</a>
+          </p>
+          <p>
+            <a     href="#!" class="text-reset">Apartment /Hotel Accodmation</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+       <!-- Grid column -->
+       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-white">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold mb-4">
+          Useful links
+        </h6>
+        <p>
+          <a       href="#!" class="text-reset">Privacy Policy</a>
+        </p>
+        <p>
+          <a    href="#!" class="text-reset">Terms & Conditions</a>
+        </p>
+        <p>
+          <a        href="#!" class="text-reset">FAQ</a>
+        </p>
+        <p>
+          <a      href="#!" class="text-reset">Help</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-white">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i   class="fas fa-home me-3"></i> Spintex Road,Off Community 18</p>
+          <p>
+            <i   class="fas fa-envelope me-3"></i>
+            healthcare@example.com
+          </p>
+          <p ><i  class="fas fa-phone me-3"></i> + 2354344668</p>
+     
+        </div>
+        <!-- Grid column -->
+      </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4 text-white ">
+    © 2025 Copyright:
+    <a class="text-reset fw-bold text-white" href="https://mdbootstrap.com/">HealthCare</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+  
+
+
+
+   
+
+
+
+      <!-- Read more -->
+
+      <script>
+        function toggleReadMore() {
+            var extraText = document.getElementById("moreText");
+            var btnText = document.getElementById("readMoreBtn");
+            
+            if (extraText.style.display === "none" || extraText.style.display === "") {
+                extraText.style.display = "inline";
+                btnText.textContent = "Read Less";
+            } else {
+                extraText.style.display = "none";
+                btnText.textContent = "Read More";
+            }
+        }
+    </script>
+
+<script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+
+
+
+
+    <!-- Bootstrap 5 JS CDN Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script> -->
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</body>
+
+</html>
