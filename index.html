@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroloaf Ghana </title>
+        
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navbar Styles */
+        nav {
+              background: transparent;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+             top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+      
+            font-weight: bold;
+            text-decoration: none;
+            display: flex; 
+            align-items: center; 
+            height: 60px
+        }
+
+      .logo-image {
+    width: 120px;
+
+    object-fit: contain;
+    height: 100%;
+     max-height: 140px; 
+     width: auto
+}
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.7;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            height: 900px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .carousel-slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .carousel-slide.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .carousel-text h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .carousel-text p {
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Navigation Arrows */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.3);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .prev:hover, .next:hover {
+            background: rgba(255,255,255,0.5);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        /* Dots */
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+
+
+        /* Marquees */
+         /* Marquee Logo Slider */
+        .logo-marquee-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+            overflow: hidden;
+        }
+
+        .marquee-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: scroll 30s linear infinite;
+        }
+
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        .badge {
+            height: 180px;
+            width: auto;
+            margin: 0 2rem;
+            object-fit: contain;
+        }
+
+          @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+            /* Content Section */
+        .content-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-section h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .content-section p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        
+        /* About Us Section */
+        .about-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+
+
+        /* Little icons */
+        .svg {
+            width: 50px;
+            height: 50px;
+            position: center;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+
+          /* Interactive Tabs Section */
+        .tabs-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f8f9fa;
+        }
+
+        .tabs-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .tabs-content {
+            order: 1;
+        }
+
+        .tabs-image {
+            order: 2;
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .tabs-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .tabs-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 1rem 2rem;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .tab-text {
+            display: none;
+        }
+
+        .tab-text.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-text h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .tab-text p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* The Process */
+        .responsive-img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        /* The Products  */
+        /* Image Grid Section */
+        .image-grid-section {
+            padding: 2rem 2rem ;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .image-grid-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 3rem;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .image-grid-item {
+            text-align: center;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .image-placeholder:hover {
+            transform: translateY(-10px);
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-grid-item h1 {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+
+
+
+
+        /* Mobile Responsive */
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.95);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+                gap: 1.5rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(8px, -8px);
+            }
+
+            .carousel-container {
+                height: 400px;
+            }
+
+            .carousel-text h2 {
+                font-size: 2rem;
+            }
+
+            .carousel-text p {
+                font-size: 1rem;
+            }
+
+            .content-section h1 {
+                font-size: 2rem;
+            }
+
+            .content-section p {
+                font-size: 1rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .about-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+            }
+
+            .prev, .next {
+                padding: 0.5rem 1rem;
+                font-size: 1.5rem;
+            }
+
+
+            
+            .tabs-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .tabs-content {
+                order: 2;
+            }
+
+            .tabs-image {
+                order: 1;
+                height: 300px;
+            }
+
+            .tabs-buttons {
+                flex-direction: column;
+            }
+
+            .tab-text h2 {
+                font-size: 1.5rem;
+            }
+
+            .tab-text p {
+                font-size: 1rem;
+            }
+
+
+
+            
+            .image-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .image-placeholder {
+                height: 200px;
+            }
+
+            .image-grid-item h1 {
+                font-size: 1.2rem;
+            }
+
+
+
+            .prev, .next {
+                padding: 0.5rem 1rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo" >
+              <img src="logo.png" alt="Logo" class="logo-image" >
+                <span style="margin-left: 10px;">AgroLoaf Ghana Limited</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Product</a></li>
+                <li><a href="#contact">Blogs</a></li>
+                 <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Hero Section -->
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="wheatfarm.png" alt="Technology">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                    <h2>Welcome to AgroLoaf Ghana Limited</h2>
+                    <p>Where we source the best and quality hard spring wheat flour</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="flour mill.png" alt="Team Work">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                    <h2>Our modern,technology equpiment with professionals</h2>
+                    <p>Where our finished product is made</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="finsihed.png" alt="Analytics">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                    <h2>Premium Quality Hard Spring Flour </h2>
+                    <p>Made with love from Turkie and for the Ghanaian Market</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="chef.png" alt="Office">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                    <h2>The Bakers' Choice</h2>
+                    <p>We meet your bakery needs </p>
+                </div>
+            </div>
+        </div>
+
+             <div class="carousel-slide">
+            <img src="the product.png" alt="Office">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                    <h2>The delicious end products</h2>
+                    <p>Making baking with passion </p>
+                </div>
+            </div>
+        </div>
+
+             <div class="carousel-slide">
+            <img src="clients.png" alt="Office">
+            <div class="carousel-overlay">
+                <div class="carousel-text">
+                    <h2>The Customers' Choice</h2>
+                    <p>Always give your customers' the same quality</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+
+
+
+  <!-- Marquees -->
+       <!-- Logo Marquee Section -->
+    <section class="logo-marquee-section">
+        <h2 class="marquee-title">Trusted by Leading Companies</h2>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="logo-item">
+                    <img src="fda.png" alt="Company 1">
+                </div>
+                <div class="logo-item">
+                    <img src="fortified.jpg" alt="Company 2" class="badge">
+                </div>
+                <div class="logo-item">
+                    <img  src="bromatefree.png" alt="Company 3"  class="badge">
+                </div>
+               
+              
+                <!-- Duplicate logos for seamless loop -->
+                <div class="logo-item">
+                    <img src="fda.png" alt="Company 1">
+                </div>
+                <div class="logo-item">
+                    <img src="fortified.jpg" alt="Company 2" class="badge">
+                </div>
+                <div class="logo-item">
+                    <img src="bromatefree.png" alt="Company 3" class="badge">
+                </div>
+           
+           
+            </div>
+        </div>
+    </section>
+
+
+
+       <!-- Content Section -->
+    <section class="content-section">
+        <h1>Welcome to Our Platform</h1>
+        <p>We are dedicated to providing innovative solutions that transform the way businesses operate. Our cutting-edge technology and expert team work together to deliver exceptional results that exceed expectations. Join thousands of satisfied clients who have already discovered the difference our services can make.</p>
+    </section>
+
+
+      <!-- About Us Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="finsihed.png" alt="About Us">
+            </div>
+            <div class="about-content">
+                <h1>AgroLoaf Ghana Limited</h1>
+
+                <p>Agroloaf Ghana is the trusted name behind the <b>NOVA TERRA brand</b>, serving as the sole importer of this premium hard wheat flour for many years. Our commitment has always been simple — deliver a product bakeries can rely on and provide the consistency that customers love.</p>
+                <p>Over the years, we’ve built strong relationships with commercial and artisanal bakeries across the country by supplying flour that performs every day, every batch. <b>NOVA TERRA’s</b>  unmatched quality has helped bakeries achieve better dough strength, improved loaf volume, and consistent results that keep customers coming back.</p>
+               <p>At Agroloaf Ghana, satisfaction is not just a promise — it’s the foundation of everything we do. From reliable supply to product education and technical support, we ensure our partners get more than flour; they get a dependable partner dedicated to their growth.</p>
+ 
+            </div>
+        </div>
+    </section>
+
+
+
+<img src="images/storage.svg" class="svg">
+
+
+  <!-- Interactive Tabs Section -->
+    <section class="tabs-section">
+        <div class="tabs-container">
+            <div class="tabs-content">
+                <div class="tabs-buttons">
+                    <button class="tab-button active" onclick="switchTab('production')">Production</button>
+                    <button class="tab-button" onclick="switchTab('storage')">Storage</button>
+                </div>
+                
+                
+                <div id="production-text" class="tab-text active">
+                    <h2>Advanced Production</h2>
+                    <p>Our state-of-the-art production facilities utilize cutting-edge technology to ensure the highest quality standards. We employ automated systems and rigorous quality control processes to deliver excellence in every product.</p>
+                    <p>With a focus on efficiency and sustainability, our production line is designed to minimize waste while maximizing output. Our experienced team oversees every step of the manufacturing process.</p>
+                </div>
+                
+                <div id="storage-text" class="tab-text">
+                    <h2>Smart Storage Solutions</h2>
+                    <p>Our modern storage facilities are equipped with climate control and advanced inventory management systems. We ensure your products are stored in optimal conditions with 24/7 monitoring and security.</p>
+                    <p>From small-scale storage to large warehouse solutions, we provide flexible options tailored to your business needs. Our logistics team ensures seamless integration with your supply chain.</p>
+                </div>
+            </div>
+            
+            <div class="tabs-image">
+                <img id="tab-image" src="production.png" alt="Production">
+            </div>
+        </div>
+    </section>
+
+    <!-- The Process -->
+     <section class="process-section">
+        <h1 class="process-title">Our Process</h1>
+        <img src="process.png" alt="The Process" class="responsive-img" >
+
+     </section>
+
+
+     <!-- The Products  -->
+
+    <section class="image-grid-section">
+        <h2>Products</h2>
+        <div>  <p>Discover our range of high-quality flours tailored to meet all your baking and cooking requirements </p></div>
+        <div class="image-grid">
+            <div class="image-grid-item">
+                <div class="image-placeholder">
+                    <img src="Sugarbread.jpg" alt="Service 1">
+                </div>
+                <h1>ALL BREAD FLAVOURS </h1>
+            </div>
+            <div class="image-grid-item">
+                <div class="image-placeholder">
+                    <img src="pizzacrust.jpg" alt="Service 2">
+                </div>
+                <h1>PIZZA CRUST</h1>
+            </div>
+            <div class="image-grid-item">
+                <div class="image-placeholder">
+                    <img src="bagels.jpg" alt="Service 3">
+                </div>
+                <h1>BAGELS </h1>
+            </div>
+            <div class="image-grid-item">
+                <div class="image-placeholder">
+                    <img src="bunsrolls.jpg" alt="Service 4">
+                </div>
+                <h1>ROLLS & BUNS </h1>
+            </div>
+            <div class="image-grid-item">
+                <div class="image-placeholder">
+                    <img src="croissants.jpg" alt="Service 5">
+                </div>
+                <h1>CROISSANTS</h1>
+            </div>
+            <!-- <div class="image-grid-item">
+                <div class="image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=400&fit=crop" alt="Service 6">
+                </div>
+                <h1>Design</h1>
+            </div>
+            <div class="image-grid-item">
+                <div class="image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=400&fit=crop" alt="Service 7">
+                </div>
+                <h1>Support</h1>
+            </div>
+            <div class="image-grid-item">
+                <div class="image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=400&fit=crop" alt="Service 8">
+                </div>
+                <h1>Training</h1>
+            </div> -->
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        // Navbar Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Carousel Functionality
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            if (index >= slides.length) currentIndex = 0;
+            if (index < 0) currentIndex = slides.length - 1;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentIndex += direction;
+            showSlide(currentIndex);
+        }
+
+        function currentSlide(index) {
+            currentIndex = index;
+            showSlide(currentIndex);
+        }
+
+        // Auto-play carousel
+        setInterval(() => {
+            currentIndex++;
+            showSlide(currentIndex);
+        }, 5000);
+    </script>
+
+
+
+  <!-- Production -->
+   <script>
+                    function switchTab(tab) {
+                        // Toggle button active state
+                        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                        if (tab === 'production') {
+                            document.querySelector('.tab-button:nth-child(1)').classList.add('active');
+                        } else {
+                            document.querySelector('.tab-button:nth-child(2)').classList.add('active');
+                        }
+                        // Toggle content
+                        document.getElementById('production-text').classList.toggle('active', tab === 'production');
+                        document.getElementById('storage-text').classList.toggle('active', tab === 'storage');
+                        // Optionally change image
+                        const tabImage = document.getElementById('tab-image');
+                        if (tab === 'production') {
+                            tabImage.src = "images/production.png";
+                            tabImage.alt = "Production";
+                        } else {
+                            tabImage.src = "images/storagetank.png";
+                            tabImage.alt = "Storage";
+                        }
+                    }
+                </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
